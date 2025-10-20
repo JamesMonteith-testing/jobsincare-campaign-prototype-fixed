@@ -1,0 +1,183 @@
+import React, { useEffect, useMemo, useState } from "react";
+
+type Settings = {
+  apiEndpoint: string;
+  liveWindowWeeks: number;
+  enableFacebook: boolean;
+  enableGoogle: boolean;
+  enableLinkedin: boolean;
+  enableTiktok: boolean;
+};
+type UiChannel = { name: string; slug: string };
+type FormatsMap = Record<string, "json" | "xml">;
+type Job = { id?: string; jobId?: string; title?: string };
+
+const loadLS = <T,>(key: string, fallback: T): T => {
+  try { const raw = localStorage.getItem(key); return raw ? (JSON.parse(raw) as T) : fallback; }
+  catch { return fallback; }
+};
+const saveLS = (key: string, value: unknown) => { try { localStorage.setItem(key, JSON.stringify(value)); } catch {} };
+
+const CHANNELS_KEY = "manage.channels";
+const FORMATS_KEY = "admin.formats";
+const readChannels = (): UiChannel[] => loadLS<UiChannel[]>(CHANNELS_KEY, []);
+const readFormats  = (): FormatsMap => loadLS<FormatsMap>(FORMATS_KEY, {});
+const writeFormats = (m: FormatsMap) => saveLS(FORMATS_KEY, m);
+
+const idOf = (j: Job) => j.id || j.jobId || "";
+
+export default function AdminClient() {
+  const apiBase = useMemo(() => {
+    const v = (import.meta as any)?.env?.VITE_API_BASE_URL;
+    const base = (typeof v === "string" && v.trim()) || "http://localhost:5174";
+    return base.replace(/\/$/, "");
+  }, []);
+
+  const [settings, setSettings] = useState<Settings | null>(null);
+  const [error, setError] = useState<string>("");
+  const [channels, setChannels] = useState<UiChannel[]>(readChannels());
+  const [formats, setFormats] = useState<FormatsMap>(readFormats());
+  const [jobs, setJobs] = useState<Job[]>([]);
+  const [jobsErr, setJobsErr] = useState<string>("");
+
+  // stay in sync with Campaigns page
+  useEffect(() => {
+    const update = () => setChannels(readChannels());
+    window.addEventListener("storage", update);
+    window.addEventListener("channels-updated", update as EventListener);
+    return () => {
+      window.removeEventListener("storage", update);
+      window.removeEventListener("channels-updated", update as EventListener);
+    };
+  }, []);
+
+  // load settings (for the top label) + load jobs (for id selection)
+  useEffect(() => {
+    (async () => {
+      try {
+        setError("");
+        const r = await fetch(`${apiBase}/api/admin/settings`, { headers: { Accept: "application/json" } });
+        if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+        setSettings(await r.json());
+      } catch (e: any) {
+        setError(e?.message || String(e));
+      }
+    })();
+  }, [apiBase]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        setJobsErr("");
+        const r = await fetch(`${apiBase}/api/jobs?perPage=50&pageNumber=1`, { headers: { Accept: "application/json" } });
+        if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+        const js = await r.json();
+        const arr =
+          Array.isArray(js) ? js :
+          js.items || js.data || js.results || js.jobs || js.records || js.rows || [];
+        setJobs(Array.isArray(arr) ? arr : []);
+      } catch (e: any) {
+        setJobsErr(e?.message || "Failed to load jobs");
+      }
+    })();
+  }, [apiBase]);
+
+  useEffect(() => { writeFormats(formats); }, [formats]);
+
+  const setFormat = (slug: string, fmt: "json" | "xml") =>
+    setFormats(prev => ({ ...prev, [slug]: fmt }));
+
+  if (error) {
+    return (
+      <div style={{ padding: 16 }}>
+        <h2 style={{ fontWeight: 600, fontSize: 18, marginBottom: 8 }}>Admin</h2>
+        <div style={{ color: "#b91c1c" }}>
+          Couldn’t reach the Admin API at <code>{apiBase}/api/admin/settings</code>.
+          <div style={{ marginTop: 8 }}>Error: <code>{error}</code></div>
+        </div>
+      </div>
+    );
+  }
+  if (!settings) return <div style={{ padding: 16, color: "#6b7280" }}>Loading admin…</div>;
+
+  const localhostBase = "http://localhost:5174";
+
+  // Build ids list using toggles saved by the Jobs page
+  const enabledIdsFor = (slug: string): string[] => {
+    const out: string[] = [];
+    for (const j of jobs) {
+      const jid = idOf(j);
+      if (!jid) continue;
+      const k = `jc.toggle.${jid}.${slug}`;
+      if (loadLS<boolean>(k, false)) out.push(jid);
+    }
+    return out;
+  };
+
+  return (
+    <div style={{ padding: 16 }}>
+      <div style={{ display: "flex", alignItems: "center", marginBottom: 14 }}>
+        <h2 style={{ fontWeight: 600, fontSize: 18, margin: 0 }}>Admin</h2>
+        <div style={{ marginLeft: "auto", fontSize: 13, color: "#6b7280" }}>
+          API: <code>{apiBase}</code>
+        </div>
+      </div>
+
+      {jobsErr && <div style={{ color: "#b91c1c", marginBottom: 12 }}>Jobs load error: {jobsErr}</div>}
+
+      {channels.length === 0 && (
+        <div style={{ color: "#6b7280", marginBottom: 12 }}>
+          No channels configured yet. Add channels in <strong>Campaign Management</strong>.
+        </div>
+      )}
+
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: 12 }}>
+        {channels.map((c) => {
+          const fmt = formats[c.slug] || "json";
+          const ids = enabledIdsFor(c.slug);
+          const query = ids.length ? `?ids=${encodeURIComponent(ids.join(","))}` : "";
+          const dataUrl = `${localhostBase}/api/${c.slug}.${fmt}${query}`;
+
+          return (
+            <div key={c.slug} style={{ border: "1px solid #e5e7eb", borderRadius: 12, padding: 16, background: "#fff" }}>
+              <div style={{ marginBottom: 8 }}>
+                <div style={{ fontWeight: 600, fontSize: 16 }}>{c.name}</div>
+                <div style={{ fontSize: 12, color: "#6b7280" }}>Endpoint uses <code>localhost</code> only.</div>
+              </div>
+
+              <div style={{ display: "flex", gap: 16, margin: "8px 0 10px" }}>
+                <label style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+                  <input type="radio" name={`format-${c.slug}`} checked={fmt === "json"} onChange={() => setFormat(c.slug, "json")} /> JSON
+                </label>
+                <label style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+                  <input type="radio" name={`format-${c.slug}`} checked={fmt === "xml"} onChange={() => setFormat(c.slug, "xml")} /> XML
+                </label>
+              </div>
+
+              <div style={{ fontSize: 12, color: "#6b7280", marginBottom: 6 }}>
+                Selected jobs: <strong>{ids.length}</strong>
+              </div>
+
+              <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
+                <a href={dataUrl} target="_blank" rel="noreferrer" style={{ fontSize: 14, color: "#2563eb", wordBreak: "break-all" }}>
+                  {dataUrl}
+                </a>
+                <button
+                  onClick={async () => { try { await navigator.clipboard.writeText(dataUrl); } catch { alert("Copy failed"); } }}
+                  title="Copy link"
+                  style={{ padding: "6px 10px", borderRadius: 8, border: "1px solid #e5e7eb", background: "#f9fafb", cursor: "pointer" }}
+                >
+                  Copy link
+                </button>
+              </div>
+
+              <div style={{ fontSize: 12, color: "#6b7280", marginTop: 8 }}>
+                Turn job toggles ON in <strong>Job Campaigns</strong>. Links include those IDs via <code>?ids=</code>.
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}

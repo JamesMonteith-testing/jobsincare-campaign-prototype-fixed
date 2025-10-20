@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Administrator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { --bg:#fff; --fg:#111; --muted:#667; --blue:#1a73e8; --bdr:#e5e7eb; --pill:#eef2ff; --pill-on:#dcfce7; --pill-off:#fee2e2; }
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+    .container{max-width:1120px;margin:0 auto;padding:24px}
+    /* nav */
+    .nav{display:flex;gap:12px;align-items:center;padding:14px 24px;border-bottom:1px solid var(--bdr);position:sticky;top:0;background:#fff;z-index:10}
+    .tab{padding:10px 16px;border:1px solid var(--bdr);border-radius:8px;background:#fff;text-decoration:none;color:var(--fg)}
+    .tab.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+    .tab.right{margin-left:auto}
+    h1{margin:18px 0 12px 0}
+    small.muted{color:var(--muted)}
+    /* form */
+    form{display:grid;gap:16px;margin-top:12px}
+    .grid{display:grid;grid-template-columns:220px 1fr;gap:10px 14px;align-items:center}
+    label{color:var(--muted)}
+    input[type="text"], input[type="number"], select{
+      width:100%;padding:10px 12px;border:1px solid var(--bdr);border-radius:8px;background:#fff;
+    }
+    .row-actions{display:flex;gap:10px;margin-top:4px}
+    .btn{padding:10px 14px;border-radius:8px;border:1px solid var(--bdr);background:#fff;cursor:pointer}
+    .btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+    /* channels */
+    .section-title{margin:20px 0 8px 0}
+    #channelsWrap{display:grid;gap:12px}
+    .ch-card{border:1px solid var(--bdr);border-radius:10px;padding:14px}
+    .ch-h{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+    .pill{font-size:12px;border-radius:999px;padding:4px 8px}
+    .on{background:var(--pill-on)} .off{background:var(--pill-off)}
+    .ch-row{display:grid;grid-template-columns:120px 1fr auto;gap:10px;align-items:center;margin:8px 0}
+    .ch-row input.ep{padding:8px 10px;border:1px solid var(--bdr);border-radius:8px}
+    .copy{padding:8px 12px;border:1px solid var(--bdr);border-radius:8px;background:#fff;cursor:pointer}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a class="tab" href="/index.html">Job Campaigns</a>
+    <a class="tab" href="/campaigns.html">Campaign Management</a>
+    <a class="tab active" href="/admin.html">Administrator</a>
+    <a class="tab right" href="/expired.html">Expired &amp; Reactivate</a>
+  </nav>
+
+  <div class="container">
+    <h1>Administrator</h1>
+    <small class="muted">Edit global settings and view channel endpoints.</small>
+
+    <form id="admin-form">
+      <div class="grid">
+        <label for="sourceFilter">Global Source Filter</label>
+        <input id="sourceFilter" type="text" placeholder="e.g. user" />
+
+        <label for="liveWeeks">Live Window (weeks)</label>
+        <input id="liveWeeks" type="number" min="1" step="1" />
+
+        <label for="apiEndpoint">Upstream API Endpoint</label>
+        <input id="apiEndpoint" type="text" placeholder="https://jobsincare.com/api/jobs" />
+
+        <label for="supplierLabel">Supplier label</label>
+        <input id="supplierLabel" type="text" placeholder="Jobs in Care" />
+
+        <label for="outputFormat">Default Output Format</label>
+        <select id="outputFormat">
+          <option value="JSON">JSON</option>
+          <option value="XML">XML</option>
+        </select>
+      </div>
+
+      <div class="row-actions">
+        <button id="saveBtn" class="btn primary" type="submit">Save settings</button>
+      </div>
+    </form>
+
+    <h3 class="section-title">Channels</h3>
+    <div id="channelsWrap">Loading…</div>
+  </div>
+
+  <script src="/admin.js"></script>
+</body>
+</html>

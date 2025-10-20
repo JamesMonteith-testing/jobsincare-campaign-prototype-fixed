@@ -1,0 +1,40 @@
+{
+  "global": {
+    "sourceFilter": "user",
+    "outputFormat": "json",
+    "liveWeeks": 6,
+    "apiEndpoint": "https://jobsincare.com/api/jobs?perPage=50&pageNumber=1",
+    "geo": {},
+    "lastSync": "2025-10-07T15:55:42.058Z"
+  },
+  "channels": {
+    "google": {
+      "id": "google",
+      "label": "Google",
+      "format": "json",
+      "endpoint": "http://localhost:5174/api/feeds/google.json",
+      "enabled": true
+    },
+    "facebook": {
+      "id": "facebook",
+      "label": "Facebook",
+      "format": "json",
+      "endpoint": "http://localhost:5174/api/feeds/facebook.json",
+      "enabled": true
+    },
+    "linkedin": {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "format": "xml",
+      "endpoint": "http://localhost:5174/api/feeds/linkedin.xml",
+      "enabled": true
+    },
+    "tiktok": {
+      "id": "tiktok",
+      "label": "TikTok",
+      "format": "xml",
+      "endpoint": "http://localhost:5174/api/feeds/tiktok.xml",
+      "enabled": true
+    }
+  }
+}

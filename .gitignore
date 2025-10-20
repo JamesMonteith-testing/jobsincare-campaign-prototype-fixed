@@ -1,0 +1,27 @@
+# Node / Vite
+node_modules/
+dist/
+.vite/
+*.log
+npm-debug.log*
+
+# Frontend env
+.env*
+!.env.example
+
+# Server runtime data & secrets
+server/data/
+server/start-api.cmd
+server/*.sqlite
+server/data/*.sqlite
+server/data/*.db
+server/data/*.json
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Archives
+*.zip
+backups/

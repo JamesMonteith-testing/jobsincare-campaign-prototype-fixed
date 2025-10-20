@@ -1,0 +1,1131 @@
+{
+  "allJobsCount": 1851,
+  "theseJobsCount": 5,
+  "perPage": 5,
+  "pageNumber": 1,
+  "sourceLookups": {
+
+  },
+  "geoLookups2": {
+    "53.48075866699219,-2.2426304817199707": {
+      "lat": 53.4807586669922,
+      "lng": -2.24263048171997,
+      "jobLocation": "Manchester, UK",
+      "count": 1,
+      "jobs": [
+        "jafaAWBJN"
+      ]
+    },
+    "55.945091247558594,-4.5646257400512695": {
+      "lat": 55.9450912475586,
+      "lng": -4.56462574005127,
+      "jobLocation": "West Dunbartonshire, Scotland, UK",
+      "count": 1,
+      "jobs": [
+        "jxcG6enIH"
+      ]
+    },
+    "56.11652374267578,-3.9369029998779297": {
+      "lat": 56.1165237426758,
+      "lng": -3.93690299987793,
+      "jobLocation": "Stirling, Scotland, UK",
+      "count": 1,
+      "jobs": [
+        "jQL633piH"
+      ]
+    },
+    "53.024391174316406,-1.4776159524917605": {
+      "lat": 53.0243911743164,
+      "lng": -1.47761595249176,
+      "jobLocation": "Belper DE56, UK",
+      "count": 1,
+      "jobs": [
+        "jNQe8eiSN"
+      ]
+    },
+    "51.37092208862305,1.127771019935608": {
+      "lat": 51.3709220886231,
+      "lng": 1.12777101993561,
+      "jobLocation": "Herne Bay, UK",
+      "count": 1,
+      "jobs": [
+        "jZezx1jrX"
+      ]
+    }
+  },
+  "numGeoLookups2": 5,
+  "jobTags": {
+    "_at": "2025-09-29T09:48:37.893Z",
+    "jafaAWBJN": [
+      {
+        "jobId": "jafaAWBJN",
+        "tag": "bonus"
+      },
+      {
+        "jobId": "jafaAWBJN",
+        "tag": "family"
+      },
+      {
+        "jobId": "jafaAWBJN",
+        "tag": "on-call"
+      },
+      {
+        "jobId": "jafaAWBJN",
+        "tag": "pension"
+      }
+    ],
+    "jxcG6enIH": [
+      {
+        "jobId": "jxcG6enIH",
+        "tag": "Blue Light Card"
+      },
+      {
+        "jobId": "jxcG6enIH",
+        "tag": "bonus"
+      },
+      {
+        "jobId": "jxcG6enIH",
+        "tag": "family"
+      },
+      {
+        "jobId": "jxcG6enIH",
+        "tag": "pension"
+      },
+      {
+        "jobId": "jxcG6enIH",
+        "tag": "Vehicle"
+      },
+      {
+        "jobId": "jxcG6enIH",
+        "tag": "weekend"
+      }
+    ],
+    "jQL633piH": [
+      {
+        "jobId": "jQL633piH",
+        "tag": "weekend"
+      }
+    ],
+    "jNQe8eiSN": [
+      {
+        "jobId": "jNQe8eiSN",
+        "tag": "family"
+      },
+      {
+        "jobId": "jNQe8eiSN",
+        "tag": "weekend"
+      }
+    ],
+    "jZezx1jrX": [
+      {
+        "jobId": "jZezx1jrX",
+        "tag": "family"
+      },
+      {
+        "jobId": "jZezx1jrX",
+        "tag": "Vehicle"
+      },
+      {
+        "jobId": "jZezx1jrX",
+        "tag": "weekend"
+      }
+    ]
+  },
+  "jobs": [
+    {
+      "jobTitleDisplay": "Care Assistant",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/care-assistant-manchester-jafaAWBJN",
+      "id": "jafaAWBJN",
+      "jobTitle": "Care Assistant",
+      "recruiterId": "rnZMIpI9P",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Manchester",
+        "UK"
+      ],
+      "created": "2025-09-25T09:32:21.022Z",
+      "source": "user",
+      "jobLocation": "Manchester, UK",
+      "foundAt": "2025-09-25T09:32:21.022Z",
+      "lat": 53.4807586669922,
+      "lng": -2.24263048171997,
+      "salary": "£12.80-£13.93 per hour + mileage + Travel time + Car allowance",
+      "jobDescription": null,
+      "jobDescription_summary": "Make a genuine difference for private clients across Trafford as a female Care Assistant with Beloved Homecare. You’ll provide warm, person-centred support — personal care (washing, dressing and grooming), light domestic tasks, medication prompting or administration from blister packs, meal preparation and companionship, including local trips to shops or garden centres. Drivers only: you must hold a full UK driving licence, have access to a car over two years old, live within 10 miles of the Trafford Centre and have the right to work in the UK (no sponsorship available). A £150 monthly car allowance is included.\n\nBeloved Homecare is a family-run, CQC Outstanding provider with 10+ years’ experience and 60% staff ownership through an Employee Ownership Trust, so your voice and development genuinely matter. You’ll get a thorough induction, mandatory training plus two weeks’ shadowing, ongoing flexible training, 24/7 on-call support, a free company mobile, pension, fully paid holiday entitlement and potential performance bonuses after 12 months for qualified staff. If this fits the caring, flexible role you want, simply click the \"Apply Now\" button on jobsincare.com.",
+      "advantages": [
+        "£150 monthly car allowance for drivers — helps cover fuel and running costs, ideal if you drive a car over two years old",
+        "60% staff-owned company (Employee Ownership Trust) with performance bonuses after 12 months — you share in the success",
+        "CQC-rated Outstanding (top 1.5% of providers) — work for a highly trusted, high-quality employer",
+        "Full induction plus two weeks' shadowing and flexible training — perfect for women returning to work or balancing family commitments",
+        "24/7 on-call management and a close-knit supportive team — you’ll never be left on your own during shifts",
+        "Local role (must live within 10 miles of Trafford Centre), free company mobile, pension and fully paid holiday — great for work–life balance"
+      ],
+      "sponsorship": "No",
+      "description": "Care Assistant – Trafford Area (Private Clients) – Drivers Only\n\n💷 £150/month car allowance | 🚫 No sponsorship available | 📍 Must live within 10 miles of Trafford Centre\n\n✨ Why Work for Beloved Homecare?\nWe believe our team deserves the same outstanding care and respect we give our clients. Here’s what you’ll get as part of our award-winning team:\n- £150 monthly car allowance – Available to drivers with a car over 2 years old\n- New Staff Support - New staff receive a full induction and mandatory training",
+      "recruiter": {
+        "id": "rnZMIpI9P",
+        "displayName": "Beloved Homecare"
+      }
+    },
+    {
+      "jobTitleDisplay": "Care Professional",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/care-professional-west-dunbartonshire-jxcG6enIH",
+      "id": "jxcG6enIH",
+      "jobTitle": "Care Professional",
+      "recruiterId": "ro9A6NRoC",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "West Dunbartonshire",
+        "Scotland",
+        "UK"
+      ],
+      "created": "2025-09-22T14:44:37.330Z",
+      "source": "user",
+      "jobLocation": "West Dunbartonshire, Scotland, UK",
+      "foundAt": "2025-09-22T14:44:37.330Z",
+      "lat": 55.9450912475586,
+      "lng": -4.56462574005127,
+      "salary": "£13-£13 per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "Home Instead West Dunbartonshire, Argyll & Bute and Arran, based in Church St, Dumbarton, offers caring roles that let you make a real difference by helping people stay safe and happy at home. Care Professionals deliver minimum one‑hour visits, with clients matched to carers by shared interests so you can build trust and provide person‑centred support. Typical duties include companionship, light housekeeping, shopping and escorting to appointments, and personal care such as bathing and dressing. You’ll receive award‑winning, fully paid training and ongoing support, earn £13.00 per hour (with enhanced bank holiday rates), and benefit from a zero‑hours contract, mileage and MOT reimbursement where applicable, employee discounts, a pension scheme, 24/7 employee assistance programme, Blue Light card and an employee referral bonus — all in a friendly, casual‑dress environment.\n\nThis role suits compassionate, organised and reliable people who communicate well, work as part of a team and can be flexible for evenings and alternate weekends. A driving licence and access to a car is preferred but other transport options will be considered; you should be willing to travel across West Dunbartonshire, Argyll & Bute and Arran. PVG checks are required (costs reimbursed after three months). This is an ideal opportunity for women carers seeking meaningful, flexible work with strong support and genuine progression — find the vacancy on jobsincare.com and to apply simply click the \"Apply Now\" button.",
+      "advantages": [
+        "Great pay plus travel perks: £13/hr, enhanced bank-holiday rates, mileage paid and MOT costs reimbursed.",
+        "Flexible zero-hours contract with minimum one-hour visits — ideal for school runs or family-friendly shifts.",
+        "Fully paid, award-winning training and ongoing support — perfect if you’re returning to work or changing careers.",
+        "Local client matching in Church St, Dumbarton and nearby West Dunbartonshire, Argyll, Bute & Arran — build trusted bonds.",
+        "Generous staff benefits: pension, 24/7 employee assistance, Blue Light card and discounts on shops, meals and holidays.",
+        "Supportive, like-minded team, casual dress and PVG check costs reimbursed after three months — practical for carers."
+      ],
+      "sponsorship": "No",
+      "description": "Home Instead is the world’s leading provider of non-medical care and companionship services that allows clients to remain in their own homes and to enhance their quality of life.\n\nWith minimum visits of 1 hour, award winning training and an excellent reputation we are immensely proud of the quality of care we provide. We match our Care Professionals to our Clients based on mutual interests and hobbies to help build bonds of trust that enables us to provide personalised support.\n\n\nCare Professional Benefits:",
+      "recruiter": {
+        "id": "ro9A6NRoC",
+        "displayName": "Home Instead West Dunbartonshire, Argyll & Bute and Arran"
+      }
+    },
+    {
+      "jobTitleDisplay": "Care Assistant",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/care-assistant-stirling-jQL633piH",
+      "id": "jQL633piH",
+      "jobTitle": "Care Assistant",
+      "recruiterId": "rcLEmLSWH",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Stirling",
+        "Scotland",
+        "UK"
+      ],
+      "created": "2025-09-19T12:13:56.017Z",
+      "source": "user",
+      "jobLocation": "Stirling, Scotland, UK",
+      "foundAt": "2025-09-19T12:13:56.017Z",
+      "lat": 56.1165237426758,
+      "lng": -3.93690299987793,
+      "salary": "£15.00-£ per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "Bring your compassion and practical skills to households across Stirlingshire as a Care Assistant with Visiting Angels Stirlingshire. You’ll provide companionship and hands-on care with a minimum one-hour allocation per visit, working on a full-time 25-hour contract that includes early mornings, evenings and alternate weekends (three shifts one week, four the next). Pay starts from £15.00 per hour and the package includes paid travel time, mileage and up to 60 minutes’ paid waiting time, a paid PVG check, a car valet every six months and a contribution towards your car service — ideal if you rely on your own transport and hold a full UK driving licence and right to work in the UK.\n\nThis role suits patient, practical carers who want meaningful work without being rushed, with comprehensive training, a tailored progression plan and a supportive culture where staff feel valued. If you’re ready to work with a respectful employer that offers genuine development and useful perks, find this vacancy on jobsincare.com — to apply simply click the \"Apply Now\" button that appears alongside this advert.",
+      "advantages": [
+        "Paid travel time, mileage and waiting time (up to 60 minutes) — your journeys between visits are paid.",
+        "Car support: free car valet every 6 months plus a financial contribution towards your car service — ideal if you drive.",
+        "Paid PVG check (Scotland's safeguarding clearance) — no upfront cost to you.",
+        "Minimum one-hour visits mean less rushing and more meaningful time with each client.",
+        "Comprehensive training and a tailored career progression programme — great for returning carers or long-term growth.",
+        "Supportive local team in Stirlingshire, competitive pay from £15/hr and a guaranteed 25-hour contract with flexible cover options."
+      ],
+      "sponsorship": "No",
+      "description": "Would you like a rewarding job that provides a sense of satisfaction?\n\nAre you an existing carer overwhelmed with too many visits and not enough time? If you love to work with people and have a genuinely caring personality, you can become an Angel companion too.\nWe are currently looking for superb experienced caregivers to work with one of our wonderful clients within Stirlingshire area.\nBenefit from:\n-Paid travel time and mileage and waiting time up to 60 minutes\n-Comprehensive training and development pro",
+      "recruiter": {
+        "id": "rcLEmLSWH",
+        "displayName": "Visiting Angels Stirlingshire"
+      }
+    },
+    {
+      "jobTitleDisplay": "Home Care Assistant",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/home-care-assistant-belper-jNQe8eiSN",
+      "id": "jNQe8eiSN",
+      "jobTitle": "Home Care Assistant",
+      "recruiterId": "r7yWwNsVF",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Belper DE56",
+        "UK"
+      ],
+      "created": "2025-09-18T13:54:59.240Z",
+      "source": "user",
+      "jobLocation": "Belper DE56, UK",
+      "foundAt": "2025-09-18T13:54:59.240Z",
+      "lat": 53.0243911743164,
+      "lng": -1.47761595249176,
+      "salary": "£12.60-£18.90 per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "Care Assistant - Belper: support local people in their own homes with Bluebird Care Derbyshire Dales & Amber Valley, based in Belper DE56. This role suits compassionate, reliable women who gain satisfaction from practical, person-centred care; please note the post is open to female applicants only as a genuine occupational qualification under the Equality Act 2010. You’ll receive £12.60 per hour (plus time-and-a-half on bank holidays) and £12.25 for travel and non-contact time, with guaranteed hours available, flexible rotas to suit both you and customers, and an expectation to share unsocial hours and alternate weekends. Work across Belper, Ripley, Horsley Woodhouse, Little Eaton, Allestree, Wirksworth, Ambergate and Cromford, with average call lengths of around one hour.\n\nExpect real support to grow your skills: full training, shadowing, a dedicated training manager and an approachable care management team who’ll back you every step of the way. You’ll join a Living Wage Accredited, CQC Outstanding-rated service that values long-term careers, offers qualification and progression opportunities, and keeps private customers with time for quality care—creating a friendly, family-feel workplace. To apply simply click the \"Apply Now\" button; this vacancy is also listed on jobsincare.com.",
+      "advantages": [
+        "Female-only role (Genuine Occupational Requirement) — this vacancy is reserved for women, increasing chances for female applicants.",
+        "Strong pay: £12.60/hr plus time-and-a-half on bank holidays; £12.25/hr paid for travel and non-contact time.",
+        "Living Wage accredited and CQC Outstanding-rated team — a respected, secure employer you can be proud to work for.",
+        "Guaranteed hours available, flexible working and average one‑hour calls — fits family life; alternate weekends are shared.",
+        "Full training, shadowing and a dedicated training manager with hands‑on care management support — great if returning to work.",
+        "Local rounds in Belper, Ripley, Allestree and nearby — travel paid and ideal for carers with a car who prefer local work."
+      ],
+      "sponsorship": "No",
+      "description": "Not all care companies are the same!   You receive full active  support in your job role.\nWe have an excellent career opportunity for the role of Home Care Assistant to join our amazing Bluebird Care Amber Valley team where you support the customer in their own home.\nAre you kind?  Compassionate?   Do people tell you that you would make an excellent carer?    Do you get a sense of achievement from helping other people? Are you honest and reliable?   We can offer you the perfect role where you will genuinely",
+      "recruiter": {
+        "id": "r7yWwNsVF",
+        "displayName": "Bluebird Care Derbyshire Dales & Amber Valley"
+      }
+    },
+    {
+      "jobTitleDisplay": "Domiciliary Care Assistant – £14/hr + Paid Travel Time (Canterbury & Surrounding Areas)",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/domiciliary-care-assistant-paid-travel-time-surrounding-herne-bay-jZezx1jrX",
+      "id": "jZezx1jrX",
+      "jobTitle": "Domiciliary Care Assistant – £14/hr + Paid Travel Time (Canterbury & Surrounding Areas)",
+      "recruiterId": "rUxpVha0K",
+      "listingType": "premium",
+      "locationTree": [
+        "Herne Bay",
+        "UK"
+      ],
+      "created": "2025-09-15T17:36:02.732Z",
+      "source": "user",
+      "jobLocation": "Herne Bay, UK",
+      "foundAt": "2025-09-15T17:36:02.732Z",
+      "lat": 51.3709220886231,
+      "lng": 1.12777101993561,
+      "salary": "£14 per hour + travel time + mileage",
+      "jobDescription": null,
+      "jobDescription_summary": "Bring kindness, practical skill and a steady hand to people in their own homes across Canterbury, Whitstable, Herne Bay and surrounding villages with Visiting Angels North Kent (based in Herne Bay). You’ll be paid £14.00/hr, with paid travel time at £12.21/hr plus 35p per mile, guaranteed 10 hours a week (with a clear pathway to 20+ hours), paid training, a free work phone and 5% annual pay rises. Shifts are flexible — mornings, evenings and alternate weekends — and you’ll be joining a supportive, friendly team that values reliability, compassion and the real difference carers make.\n\nYou’ll provide personal care, companionship, mobility support, meal prep and help with daily living while following personalised care plans and keeping accurate records; strong relationships with families and local professionals are central to the role. Previous domiciliary experience is ideal, but candidates new to care with the right values are welcome; a full UK driving licence, your own vehicle and the right to work in the UK are required. This opportunity is listed on jobsincare.com — to apply simply click the \"Apply Now\" button.",
+      "advantages": [
+        "Paid travel time (£12.21/hr) plus 35p/mile—your driving between calls is paid, ideal if you use your car for work.",
+        "Guaranteed 10 hrs/week contract (not zero-hours) with pathway to 20+ hrs—gives reliable income for family budgeting.",
+        "£14/hr starting pay with 5% annual increases—fair pay and regular wage growth for long‑term planning.",
+        "Paid training and a free work phone—supports new carers and helps keep work and family calls separate.",
+        "Flexible shifts (mornings, evenings) and only alternate weekends—fits school runs or other family commitments.",
+        "Local roles in Canterbury, Whitstable and Herne Bay with a supportive team—build trusted relationships near home."
+      ],
+      "sponsorship": "No",
+      "description": "💷  £14.00 per hour starting rate \n🚗  Paid travel time (£12.21/hr) + 35p mileage \n📈  Guaranteed 10 hrs/week , with pathway to 20+ hrs/week\n📅  Alternate weekends required \n📱 Paid training & free work phone\n\n Why Join Us? \nWe believe great carers deserve great support. That’s why we guarantee hours, pay fairly for your travel time, and offer clear progression.\n•\tGuaranteed  10 hrs/week contract  (not zero-hours)\n•\t Career progression  with 5% annual pay rises\n•\tFlexible shifts: mornings, evenings & weeken",
+      "recruiter": {
+        "id": "rUxpVha0K",
+        "displayName": "Visiting Angels North Kent"
+      }
+    }
+  ],
+  "pinnedJobs": [
+    {
+      "jobTitleDisplay": "Care Assistant",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/care-assistant-manchester-jafaAWBJN",
+      "id": "jafaAWBJN",
+      "jobTitle": "Care Assistant",
+      "recruiterId": "rnZMIpI9P",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Manchester",
+        "UK"
+      ],
+      "created": "2025-09-25T09:32:21.022Z",
+      "source": "user",
+      "jobLocation": "Manchester, UK",
+      "foundAt": "2025-09-25T09:32:21.022Z",
+      "lat": 53.4807586669922,
+      "lng": -2.24263048171997,
+      "salary": "£12.80-£13.93 per hour + mileage + Travel time + Car allowance",
+      "jobDescription": null,
+      "jobDescription_summary": "Make a genuine difference for private clients across Trafford as a female Care Assistant with Beloved Homecare. You’ll provide warm, person-centred support — personal care (washing, dressing and grooming), light domestic tasks, medication prompting or administration from blister packs, meal preparation and companionship, including local trips to shops or garden centres. Drivers only: you must hold a full UK driving licence, have access to a car over two years old, live within 10 miles of the Trafford Centre and have the right to work in the UK (no sponsorship available). A £150 monthly car allowance is included.\n\nBeloved Homecare is a family-run, CQC Outstanding provider with 10+ years’ experience and 60% staff ownership through an Employee Ownership Trust, so your voice and development genuinely matter. You’ll get a thorough induction, mandatory training plus two weeks’ shadowing, ongoing flexible training, 24/7 on-call support, a free company mobile, pension, fully paid holiday entitlement and potential performance bonuses after 12 months for qualified staff. If this fits the caring, flexible role you want, simply click the \"Apply Now\" button on jobsincare.com.",
+      "advantages": [
+        "£150 monthly car allowance for drivers — helps cover fuel and running costs, ideal if you drive a car over two years old",
+        "60% staff-owned company (Employee Ownership Trust) with performance bonuses after 12 months — you share in the success",
+        "CQC-rated Outstanding (top 1.5% of providers) — work for a highly trusted, high-quality employer",
+        "Full induction plus two weeks' shadowing and flexible training — perfect for women returning to work or balancing family commitments",
+        "24/7 on-call management and a close-knit supportive team — you’ll never be left on your own during shifts",
+        "Local role (must live within 10 miles of Trafford Centre), free company mobile, pension and fully paid holiday — great for work–life balance"
+      ],
+      "sponsorship": "No",
+      "description": "Care Assistant – Trafford Area (Private Clients) – Drivers Only\n\n💷 £150/month car allowance | 🚫 No sponsorship available | 📍 Must live within 10 miles of Trafford Centre\n\n✨ Why Work for Beloved Homecare?\nWe believe our team deserves the same outstanding care and respect we give our clients. Here’s what you’ll get as part of our award-winning team:\n- £150 monthly car allowance – Available to drivers with a car over 2 years old\n- New Staff Support - New staff receive a full induction and mandatory training",
+      "recruiter": {
+        "id": "rnZMIpI9P",
+        "displayName": "Beloved Homecare"
+      }
+    },
+    {
+      "jobTitleDisplay": "Care Professional",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/care-professional-west-dunbartonshire-jxcG6enIH",
+      "id": "jxcG6enIH",
+      "jobTitle": "Care Professional",
+      "recruiterId": "ro9A6NRoC",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "West Dunbartonshire",
+        "Scotland",
+        "UK"
+      ],
+      "created": "2025-09-22T14:44:37.330Z",
+      "source": "user",
+      "jobLocation": "West Dunbartonshire, Scotland, UK",
+      "foundAt": "2025-09-22T14:44:37.330Z",
+      "lat": 55.9450912475586,
+      "lng": -4.56462574005127,
+      "salary": "£13-£13 per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "Home Instead West Dunbartonshire, Argyll & Bute and Arran, based in Church St, Dumbarton, offers caring roles that let you make a real difference by helping people stay safe and happy at home. Care Professionals deliver minimum one‑hour visits, with clients matched to carers by shared interests so you can build trust and provide person‑centred support. Typical duties include companionship, light housekeeping, shopping and escorting to appointments, and personal care such as bathing and dressing. You’ll receive award‑winning, fully paid training and ongoing support, earn £13.00 per hour (with enhanced bank holiday rates), and benefit from a zero‑hours contract, mileage and MOT reimbursement where applicable, employee discounts, a pension scheme, 24/7 employee assistance programme, Blue Light card and an employee referral bonus — all in a friendly, casual‑dress environment.\n\nThis role suits compassionate, organised and reliable people who communicate well, work as part of a team and can be flexible for evenings and alternate weekends. A driving licence and access to a car is preferred but other transport options will be considered; you should be willing to travel across West Dunbartonshire, Argyll & Bute and Arran. PVG checks are required (costs reimbursed after three months). This is an ideal opportunity for women carers seeking meaningful, flexible work with strong support and genuine progression — find the vacancy on jobsincare.com and to apply simply click the \"Apply Now\" button.",
+      "advantages": [
+        "Great pay plus travel perks: £13/hr, enhanced bank-holiday rates, mileage paid and MOT costs reimbursed.",
+        "Flexible zero-hours contract with minimum one-hour visits — ideal for school runs or family-friendly shifts.",
+        "Fully paid, award-winning training and ongoing support — perfect if you’re returning to work or changing careers.",
+        "Local client matching in Church St, Dumbarton and nearby West Dunbartonshire, Argyll, Bute & Arran — build trusted bonds.",
+        "Generous staff benefits: pension, 24/7 employee assistance, Blue Light card and discounts on shops, meals and holidays.",
+        "Supportive, like-minded team, casual dress and PVG check costs reimbursed after three months — practical for carers."
+      ],
+      "sponsorship": "No",
+      "description": "Home Instead is the world’s leading provider of non-medical care and companionship services that allows clients to remain in their own homes and to enhance their quality of life.\n\nWith minimum visits of 1 hour, award winning training and an excellent reputation we are immensely proud of the quality of care we provide. We match our Care Professionals to our Clients based on mutual interests and hobbies to help build bonds of trust that enables us to provide personalised support.\n\n\nCare Professional Benefits:",
+      "recruiter": {
+        "id": "ro9A6NRoC",
+        "displayName": "Home Instead West Dunbartonshire, Argyll & Bute and Arran"
+      }
+    },
+    {
+      "jobTitleDisplay": "Care Assistant",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/care-assistant-stirling-jQL633piH",
+      "id": "jQL633piH",
+      "jobTitle": "Care Assistant",
+      "recruiterId": "rcLEmLSWH",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Stirling",
+        "Scotland",
+        "UK"
+      ],
+      "created": "2025-09-19T12:13:56.017Z",
+      "source": "user",
+      "jobLocation": "Stirling, Scotland, UK",
+      "foundAt": "2025-09-19T12:13:56.017Z",
+      "lat": 56.1165237426758,
+      "lng": -3.93690299987793,
+      "salary": "£15.00-£ per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "Bring your compassion and practical skills to households across Stirlingshire as a Care Assistant with Visiting Angels Stirlingshire. You’ll provide companionship and hands-on care with a minimum one-hour allocation per visit, working on a full-time 25-hour contract that includes early mornings, evenings and alternate weekends (three shifts one week, four the next). Pay starts from £15.00 per hour and the package includes paid travel time, mileage and up to 60 minutes’ paid waiting time, a paid PVG check, a car valet every six months and a contribution towards your car service — ideal if you rely on your own transport and hold a full UK driving licence and right to work in the UK.\n\nThis role suits patient, practical carers who want meaningful work without being rushed, with comprehensive training, a tailored progression plan and a supportive culture where staff feel valued. If you’re ready to work with a respectful employer that offers genuine development and useful perks, find this vacancy on jobsincare.com — to apply simply click the \"Apply Now\" button that appears alongside this advert.",
+      "advantages": [
+        "Paid travel time, mileage and waiting time (up to 60 minutes) — your journeys between visits are paid.",
+        "Car support: free car valet every 6 months plus a financial contribution towards your car service — ideal if you drive.",
+        "Paid PVG check (Scotland's safeguarding clearance) — no upfront cost to you.",
+        "Minimum one-hour visits mean less rushing and more meaningful time with each client.",
+        "Comprehensive training and a tailored career progression programme — great for returning carers or long-term growth.",
+        "Supportive local team in Stirlingshire, competitive pay from £15/hr and a guaranteed 25-hour contract with flexible cover options."
+      ],
+      "sponsorship": "No",
+      "description": "Would you like a rewarding job that provides a sense of satisfaction?\n\nAre you an existing carer overwhelmed with too many visits and not enough time? If you love to work with people and have a genuinely caring personality, you can become an Angel companion too.\nWe are currently looking for superb experienced caregivers to work with one of our wonderful clients within Stirlingshire area.\nBenefit from:\n-Paid travel time and mileage and waiting time up to 60 minutes\n-Comprehensive training and development pro",
+      "recruiter": {
+        "id": "rcLEmLSWH",
+        "displayName": "Visiting Angels Stirlingshire"
+      }
+    },
+    {
+      "jobTitleDisplay": "Home Care Assistant",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/home-care-assistant-belper-jNQe8eiSN",
+      "id": "jNQe8eiSN",
+      "jobTitle": "Home Care Assistant",
+      "recruiterId": "r7yWwNsVF",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Belper DE56",
+        "UK"
+      ],
+      "created": "2025-09-18T13:54:59.240Z",
+      "source": "user",
+      "jobLocation": "Belper DE56, UK",
+      "foundAt": "2025-09-18T13:54:59.240Z",
+      "lat": 53.0243911743164,
+      "lng": -1.47761595249176,
+      "salary": "£12.60-£18.90 per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "Care Assistant - Belper: support local people in their own homes with Bluebird Care Derbyshire Dales & Amber Valley, based in Belper DE56. This role suits compassionate, reliable women who gain satisfaction from practical, person-centred care; please note the post is open to female applicants only as a genuine occupational qualification under the Equality Act 2010. You’ll receive £12.60 per hour (plus time-and-a-half on bank holidays) and £12.25 for travel and non-contact time, with guaranteed hours available, flexible rotas to suit both you and customers, and an expectation to share unsocial hours and alternate weekends. Work across Belper, Ripley, Horsley Woodhouse, Little Eaton, Allestree, Wirksworth, Ambergate and Cromford, with average call lengths of around one hour.\n\nExpect real support to grow your skills: full training, shadowing, a dedicated training manager and an approachable care management team who’ll back you every step of the way. You’ll join a Living Wage Accredited, CQC Outstanding-rated service that values long-term careers, offers qualification and progression opportunities, and keeps private customers with time for quality care—creating a friendly, family-feel workplace. To apply simply click the \"Apply Now\" button; this vacancy is also listed on jobsincare.com.",
+      "advantages": [
+        "Female-only role (Genuine Occupational Requirement) — this vacancy is reserved for women, increasing chances for female applicants.",
+        "Strong pay: £12.60/hr plus time-and-a-half on bank holidays; £12.25/hr paid for travel and non-contact time.",
+        "Living Wage accredited and CQC Outstanding-rated team — a respected, secure employer you can be proud to work for.",
+        "Guaranteed hours available, flexible working and average one‑hour calls — fits family life; alternate weekends are shared.",
+        "Full training, shadowing and a dedicated training manager with hands‑on care management support — great if returning to work.",
+        "Local rounds in Belper, Ripley, Allestree and nearby — travel paid and ideal for carers with a car who prefer local work."
+      ],
+      "sponsorship": "No",
+      "description": "Not all care companies are the same!   You receive full active  support in your job role.\nWe have an excellent career opportunity for the role of Home Care Assistant to join our amazing Bluebird Care Amber Valley team where you support the customer in their own home.\nAre you kind?  Compassionate?   Do people tell you that you would make an excellent carer?    Do you get a sense of achievement from helping other people? Are you honest and reliable?   We can offer you the perfect role where you will genuinely",
+      "recruiter": {
+        "id": "r7yWwNsVF",
+        "displayName": "Bluebird Care Derbyshire Dales & Amber Valley"
+      }
+    },
+    {
+      "jobTitleDisplay": "Care assistant",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/care-assistant-nottingham-jo97NADYz",
+      "id": "jo97NADYz",
+      "jobTitle": "Care assistant",
+      "recruiterId": "rmE25XYhZ",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Nottingham",
+        "England",
+        "UK"
+      ],
+      "created": "2025-09-08T12:39:54.635Z",
+      "source": "user",
+      "jobLocation": "Nottingham, England, UK",
+      "foundAt": "2025-09-08T12:39:54.635Z",
+      "lat": 52.9540214538574,
+      "lng": -1.15498924255371,
+      "salary": "£13.00-£13.50 per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "Care Assistants needed in Radcliffe‑on‑Trent and the surrounding area for Visiting Angels East Nottinghamshire — flexible full‑time, part‑time or bespoke hours with pay at £13.00–£13.50 an hour plus paid drive time and 35p/mile. You’ll provide respectful, hands‑on support for adults with significant learning disabilities in their own homes — personal care, mobility assistance, medication and dietary support — visiting the same clients each week so you can build trusted relationships and work with dignity at the heart of every interaction. Training, DBS checks and a work mobile are provided, and you’ll learn alongside experienced colleagues who really value carers’ skills.\n\nThis carer‑centric role offers practical perks that make a real difference: minimum one‑hour visits, guaranteed annual pay increases, paid travel time and mileage, part‑time and full‑time contracts (not zero‑hours), a caregiver loyalty scheme, family engagement events and a free wellbeing programme. It’s especially suited to people balancing family life who want secure, rewarding work and progression in care. Visiting Angels and jobsincare.com make applying straightforward — to apply simply click the \"Apply Now\" button.",
+      "advantages": [
+        "Secure part-time or full-time contracts (not zero-hours) — reliable shifts ideal for parents or carers in Radcliffe-on-Trent.",
+        "Paid drive time plus 35p per mile — perfect if you’ve got a car and want travel costs covered around Nottingham.",
+        "Minimum 1-hour visits and same clients each week — less rush, predictable routine and stronger relationships to fit family life.",
+        "All training and DBS checks paid for, plus a free Caregiver Wellbeing Programme — build your skills at no cost.",
+        "Higher-than-minimum wage with guaranteed pay increases each year — fair, increasing pay for long-term security.",
+        "Local, carer-centric team with a work mobile, caregiver loyalty rewards and free family engagement events."
+      ],
+      "sponsorship": "No",
+      "description": "Make a Difference. Build a Career. Get Rewarded.\nLocation: Radcliffe -on- Trent and Surroundings\nJob Type: Full-time | Part-time | Flexible Hours\nSalary: £13.00- £13.50 + Paid Drive time+ 35p/mile Mileage\nAlready Have Care Experience? You’ll Be Valued Here. We’ll support you with training, reward you fairly, and welcome you into a team that truly makes a difference.\n\nAs a Visiting Angels Carer, you will work with people with significant learning disabilities who need support in their own homes, and you will",
+      "recruiter": {
+        "id": "rmE25XYhZ",
+        "displayName": "Visiting Angels East Nottinghamshire"
+      }
+    },
+    {
+      "jobTitleDisplay": "Support Worker",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/support-worker-ayrshire-jN17HvAzL",
+      "id": "jN17HvAzL",
+      "jobTitle": "Support Worker",
+      "recruiterId": "rbMdxZ8K1",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Ayrshire",
+        "Scotland",
+        "UK"
+      ],
+      "created": "2025-09-02T09:34:56.076Z",
+      "source": "user",
+      "jobLocation": "Ayrshire, Scotland, UK",
+      "foundAt": "2025-09-02T09:34:56.076Z",
+      "lat": 55.5,
+      "lng": 4.5,
+      "salary": "£12.82 per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "Cairllum Care in South Ayrshire is looking for warm, dependable Support Workers to deliver person-centred care across the community. You’ll support people with all aspects of personal care, medication administration, meal preparation, social engagement and light household tasks. No previous experience is required — we provide a full induction, paid training and paid shadow shifts, plus uniform and PPE to get you confident and ready from day one. Flexible full‑ and part‑time shifts mean you can balance work with family life or other commitments.\n\nThis family‑run organisation offers competitive pay of £12.82–£15.45 per hour, paid holidays, paid mileage, a free PVG check and a complimentary Blue Light Card with exclusive discounts, alongside supportive management and real opportunities for progression. If you care about making a practical difference and want a role that fits your life, find this vacancy on jobsincare.com and to apply simply click the \"Apply Now\" button that appears alongside this listing.",
+      "advantages": [
+        "Flexible full/part‑time shifts — ideal for school runs, family life or second jobs in South Ayrshire.",
+        "Paid mileage and local roles across South Ayrshire — perfect if you drive, reducing commute costs and time.",
+        "OFF-Competitive pay £12.82–£15.45 per hour — solid rates to support your household budget.",
+        "Paid induction, training and paid shadow shifts — no previous experience required; learn on the job.",
+        "Free PVG check, uniform and PPE provided — no upfront costs to start working in care in Scotland.",
+        "Family‑run, supportive management with clear progression and a free Blue Light Card for discounts."
+      ],
+      "sponsorship": "No",
+      "description": "Join our dynamic, family-run team in South Ayrshire and enjoy a rewarding career with excellent benefits! We offer full and part-time roles with flexible shift patterns to fit your lifestyle, whether you’re looking for steady hours or more flexibility. As part of our team, you'll receive a  uniform and PPE, along with full induction and paid training to set you up for success. Take advantage of paid shadow shifts to gain valuable experience, and enjoy competitive rates from £12.82 per hour. We also provide ",
+      "recruiter": {
+        "id": "rbMdxZ8K1",
+        "displayName": "Cairllum Care"
+      }
+    },
+    {
+      "jobTitleDisplay": "Care Assistant",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/care-assistant-carlisle-jvbjnr3C5",
+      "id": "jvbjnr3C5",
+      "jobTitle": "Care Assistant",
+      "recruiterId": "rbazb0Dg",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Carlisle",
+        "England",
+        "UK"
+      ],
+      "created": "2025-09-01T07:51:52.856Z",
+      "source": "user",
+      "jobLocation": "Carlisle, England, UK",
+      "foundAt": "2025-09-01T07:51:52.856Z",
+      "lat": 54.8924713134766,
+      "lng": -2.9329309463501,
+      "salary": "£13-£19.50 per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "At Bluebird Care Carlisle you’ll deliver compassionate, person-centred support to people in their own homes — helping with personal care (bathing, dressing, medication), mobility, household tasks, meal preparation, shopping, appointments and companionship. Shifts run between 7am and 10pm with flexible full- and part-time options (some guaranteed hours) and alternate weekends; pay is £13.00 per hour plus 30p per mile. This role suits reliable, empathetic people with the right to work in the UK — a full UK driving licence and a car insured for business use are essential. We do not provide sponsorship.\n\nYou’ll join a family-run, supportive team with 17 years’ local experience and receive paid induction and shadow shifts, ongoing paid refresher training and access to nationally recognised qualifications via the Bluebird Care Training Academy (Care Certificate and Level 2 & 3 courses). Other perks include 28 days’ holiday (pro rata), pension, uniform, DBS paid for, a choice of a £100 Prezzee voucher or Care Friends points on your first payday, referral rewards and Bluelight discounts — all designed to help you grow and feel valued. Bluebird Care Carlisle is listed on jobsincare.com — to apply simply click the \"Apply Now\" button.",
+      "advantages": [
+        "Flexible shifts 7am–10pm — fit work around school, caring or family life; choose full or part-time to suit you.",
+        "Competitive pay £13/hr plus 30p per mile — ideal if you drive between clients; travel costs are reimbursed.",
+        "Paid induction, paid shadow shifts and regular paid refresher training — great if you’re returning to work or learning on the job.",
+        "Clear career path via Bluebird Care Training Academy — Care Certificate plus Level 2 & 3 nationally recognised courses.",
+        "Family-run for 17 years with a friendly, supportive team — stability, kindness and a community focus in Carlisle.",
+        "Practical benefits: guaranteed hours available, 28 days' holiday (pro rata), pension, joining voucher and £250 referral reward."
+      ],
+      "sponsorship": "No",
+      "description": "Join Bluebird Care Carlisle, a family-run business with 17 years of experience, providing exceptional home care.\nEnjoy flexible working hours from 7am to 10pm, perfect for balancing work and personal commitments.\nReceive competitive pay at £13.00 per hour with a mileage allowance, rewarding your efforts as you travel between clients.\nBenefit from comprehensive training, including paid induction, ensuring you feel confident and well-prepared.\nGain access to career progression opportunities and nationally rec",
+      "recruiter": {
+        "id": "rbazb0Dg",
+        "displayName": "Bluebird Care Carlisle"
+      }
+    },
+    {
+      "jobTitleDisplay": "support worker ",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/support-worker-glasgow-jjmnxPKta",
+      "id": "jjmnxPKta",
+      "jobTitle": "support worker ",
+      "recruiterId": "rxY3K0uLN",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Glasgow",
+        "Scotland",
+        "UK"
+      ],
+      "created": "2025-08-27T11:24:07.707Z",
+      "source": "user",
+      "jobLocation": "Glasgow, Scotland, UK",
+      "foundAt": "2025-08-27T11:24:07.707Z",
+      "lat": 55.8616714477539,
+      "lng": -4.25833463668823,
+      "salary": "£12.62-£15.45 per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "Plus Homecare, a family-run care provider in Glasgow, is looking for warm, reliable support workers to deliver person-centred care and companionship across flexible full- and part-time shifts. This role suits compassionate carers—many of whom are women—who want meaningful work that fits around life: you’ll support people with daily living, build trusting relationships and be part of a close-knit team that values your skills and compassion.\n\nYou’ll receive competitive rates from £12.82 to £15, uniform and PPE, a full induction plus paid training, e-learning and shadow shifts, paid holidays and mileage, and a free PVG check. Enjoy career progression opportunities, exclusive Blue Light Card discounts and 24/7 managerial support from a team that genuinely cares. Find the full listing on jobsincare.com and to apply simply click the \"Apply Now\" button.",
+      "advantages": [
+        "Flexible shifts (full or part‑time) to fit childcare and family life — ideal for women juggling school runs or other caring responsibilities.",
+        "Competitive pay £12.82–£15.45/hr plus paid mileage — great if you drive to clients and need reliable income.",
+        "Paid induction, in‑house training and paid shadow shifts — no experience needed, perfect for a career change or returning to work.",
+        "Family‑run team with supportive management and clear progression routes — a respectful, people‑centred workplace.",
+        "Free PVG check, uniform, PPE and a complimentary Blue Light Card — reduces upfront costs and offers handy discounts.",
+        "Paid holidays and benefits tailored to carers — steady support and recognition for your commitment."
+      ],
+      "sponsorship": "No",
+      "description": "Join our dynamic, family-run team in Glasgow and enjoy a rewarding career with excellent benefits! We offer full and part-time roles with flexible shift patterns to fit your lifestyle, whether you’re looking for steady hours or more flexibility. As part of our team, you'll receive a comprehensive uniform and PPE, along with full induction and paid training to set you up for success. Take advantage of paid shadow shifts to gain valuable experience, and enjoy competitive rates from £12.82 to £15.45 per hour. ",
+      "recruiter": {
+        "id": "rxY3K0uLN",
+        "displayName": "Plus Homecare"
+      }
+    },
+    {
+      "jobTitleDisplay": "Registered Manager",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/registered-manager-nottingham-j0ZztnJeW",
+      "id": "j0ZztnJeW",
+      "jobTitle": "Registered Manager",
+      "recruiterId": "rmE25XYhZ",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Nottingham",
+        "England",
+        "UK"
+      ],
+      "created": "2025-08-26T16:01:53.912Z",
+      "source": "user",
+      "jobLocation": "Nottingham, England, UK",
+      "foundAt": "2025-08-26T16:01:53.912Z",
+      "lat": 52.9540214538574,
+      "lng": -1.15498924255371,
+      "salary": "Up to £40`000 per year",
+      "jobDescription": null,
+      "jobDescription_summary": "Bring calm, competence and compassion to the role of Registered Manager with Visiting Angels East Nottinghamshire, based in Radcliffe-on-Trent. You will take full ownership of branch operations and compliance, ensuring consistently high standards of domiciliary care while working closely with the Managing Director, office team, external agencies and care staff. The role involves recruiting, training, mentoring and retaining care teams, leading on CQC inspections and PIRs, hitting monthly and quarterly KPIs, and representing the service in the community to grow the business. This is a hands-on leadership post for an organised, detail‑focused manager with proven domiciliary care experience, strong knowledge of CQC requirements, NVQ Level 5 (or working towards) and a full UK driving licence.\n\nThis full-time position offers a negotiable salary of £35,500–£38,000 (with an increase after successful probation), 40 hours per week plus on‑call duties, and a generous benefits package including performance bonuses, full sick pay (Ts & Cs), paid DBS, staff discounts, birthdays off, 29 days’ holiday and clear training and career development pathways. Visiting Angels pride themselves on a values-driven, supportive culture — colleagues say the company feels like a family and genuinely looks after its staff so they can deliver brilliant care. To apply simply click the \"Apply Now\" button — this vacancy is listed on jobsincare.com.",
+      "advantages": [
+        "Staff-first culture at Visiting Angels East Nottinghamshire — a family-feel workplace that supports carers to flourish, ideal for compassionate women leaders.",
+        "Competitive salary £35,500–£38,000 (negotiable) with a pay rise after probation — strong financial security for household earners.",
+        "Generous benefits: 29 days' holiday, full sick pay, paid DBS, staff discounts and birthdays off — practical perks that help work–life balance.",
+        "Clear career progression: NVQ Level 5 support, funded training and leadership development to grow your manager CV and prospects.",
+        "Local role in Radcliffe‑On‑Trent requiring a driving licence — perfect if you’re a driver wanting autonomy and meaningful community work.",
+        "Hands‑on, supported CQC responsibility — lead inspections with MD backing, boosting your compliance experience and professional reputation."
+      ],
+      "sponsorship": "No",
+      "description": "Being a manager is more than just a job; it’s about making a difference in people’s lives. We seek a passionate, caring, and ambitious manager to join our dynamic team.\n\nAt Visiting Angels East Notts, our business model is looking after our staff so they can be the best versions of themselves. We pride ourselves on providing our clients consistent, quality care and support.\n\nWe are looking for a Registered Care Manager who embodies these values, is purpose-driven, and has experience joining our trusted bran",
+      "recruiter": {
+        "id": "rmE25XYhZ",
+        "displayName": "Visiting Angels East Nottinghamshire"
+      }
+    },
+    {
+      "jobTitleDisplay": "Care Worker",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/care-worker-sunderland-jgWHsvu2l",
+      "id": "jgWHsvu2l",
+      "jobTitle": "Care Worker",
+      "recruiterId": "rje7Pr5FJ",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Sunderland",
+        "England",
+        "UK"
+      ],
+      "created": "2025-08-20T09:56:10.937Z",
+      "source": "user",
+      "jobLocation": "Sunderland, England, UK",
+      "foundAt": "2025-08-20T09:56:10.937Z",
+      "lat": 54.906867980957,
+      "lng": -1.38380098342896,
+      "salary": "£13.40-£14.20 per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "Bring your compassionate, practical care to Blue Ribbon Community Care in Sunderland and surrounding areas, supporting people in their own homes for an Outstanding‑rated provider. We are recruiting female care workers with a full UK driving licence and access to a car; we guarantee 16 hours per week for those with full availability (average 30 hours/week expected). Pay starts at £13.40/hr during a usual three‑month probation, rising to £14.20/hr thereafter, plus 45p per mile — and we’re proud members of the Real Living Wage Foundation. The family‑friendly two‑week rolling rota (six days on, four days off with every other weekend free), paid training, three free uniforms, unlimited PPE, Blue Light Card, paid mileage, a supportive management team and referral bonuses (£300) make this a practical and rewarding role.\n\nYou’ll provide hands‑on support in clients’ homes: medication prompts, personal care (bathing, continence, dressing), shopping and meal prep, outings and errands, and light household tasks — work that genuinely improves lives. Ideal for women who’ve cared for family, worked in health settings, or are new to care but are reliable, flexible and keen to learn; full training and QCF support up to level 5 are available. Exemption is claimed under the Equality Act 2010 Part 1 Schedule 9. To apply, simply click the \"Apply Now\" button alongside this advert — you’ll be taken to jobsincare.com to complete your application.",
+      "advantages": [
+        "Work for an 'Outstanding' rated, nationally top‑rated homecare provider — trusted reputation and high-quality care standards.",
+        "Guaranteed 16 hrs/week if fully available, with average 30 hrs expected — dependable income for working mums.",
+        "Real Living Wage member: £13.40ph rising to £14.20 after probation, plus 45p/mile — better pay and mileage for drivers.",
+        "Two‑week rolling rota (6 days on, 4 days off) with alternate weekends off — predictable, family‑friendly schedule.",
+        "Recruiting female care workers with a car and UK driving licence — ideal if you need flexible, independent travel for shifts and school runs.",
+        "Paid training and QCF support (levels 2–5), three free uniforms and a £300 referral bonus — career growth and extra earnings."
+      ],
+      "sponsorship": "No",
+      "description": "Working in our local community for an “Outstanding” rated care provider.\n•\tWe are recruiting female care workers with access to a car and with a UK driving license.\n•\tWe pay a guaranteed 16 hours per week for those with full availability. 30 hours (average) per week expected.\n•\tSunderland and surrounding areas.\nWe are members of the “Real Living Wage Foundation”. Probation which is usually three months, starting at £13.40 per hour, this can rise to £14.20 per hour thereafter. PLUS mileage (£0.45p per mile).",
+      "recruiter": {
+        "id": "rje7Pr5FJ",
+        "displayName": "Blue Ribbon Community Care"
+      }
+    },
+    {
+      "jobTitleDisplay": "Carer (Care at Home)",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/carer-inverness-jgZeQlgbP",
+      "id": "jgZeQlgbP",
+      "jobTitle": "Carer (Care at Home)",
+      "recruiterId": "rUd7y7SYL",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Inverness",
+        "Scotland",
+        "UK"
+      ],
+      "created": "2025-08-20T09:04:25.600Z",
+      "source": "user",
+      "jobLocation": "Inverness, Scotland, UK",
+      "foundAt": "2025-08-20T09:04:25.600Z",
+      "lat": 57.4777717590332,
+      "lng": -4.22472095489502,
+      "salary": "£12.60-£14.00 per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "Help people live well and independently in their own homes across Inverness and the surrounding area with Highland Home Carers, an Inverness-based provider. As a Carer (Care at Home) you’ll support people with personal care, mobility, medication and dietary needs, always respecting choice and dignity. Roles are available full-time, part-time or with flexible hours, paying £12.60–£14.00 per hour plus paid overtime and 45p per mile travel reimbursement, and you don’t need prior experience — you’ll train at our award-winning Care Academy in Inverness, get paid while you learn, and can complete SVQ2, SVQ3 and further professional qualifications.\n\nThis opportunity suits those starting out, returning to work, working part-time or already experienced carers who want to be valued and supported. Benefits include 6.2 weeks’ paid holiday, a contributory pension (we pay 4%), tax-free profit share and share allocation after a qualifying period, free uniforms, SSSC support, access to some pay before payday, flexible family-friendly scheduling, and a £500 referral bonus. Highland Home Carers is listed positively on jobsincare.com — to apply simply click the \"Apply Now\" button.",
+      "advantages": [
+        "Paid, accredited training at the award-winning Inverness Care Academy - get SVQ2/3 and earn while you learn, ideal for career-starters or returners.",
+        "Flexible hours and family-friendly shifts - perfect for school runs, part-time work or fitting around caring responsibilities.",
+        "45p/mile travel reimbursement plus paid overtime - worthwhile support if you use your own car around Inverness and surrounding areas.",
+        "Competitive pay (£12.60-£14.00/hr), tax-free profit share and a contributory pension - solid financial packages for long-term security.",
+        "No prior experience required, strong local reputation and clear career progression - great for a 40-year-old changing careers or returning after a break.",
+        "Generous extras: 6.2 weeks' holiday, free uniforms, help with SSSC registration, £500 referral bonus and access to some pay early."
+      ],
+      "sponsorship": "No",
+      "description": "Make a Difference. Build a Career. Get Rewarded.\nLocation: Inverness & Surrounding Areas\nJob Type: Full-time | Part-time | Flexible Hours\nHourly Rate: £12.60 - £14.00 + Paid Overtime + 45p/mile Mileage\nWhether you're starting your career, returning to work, or already experienced in care, there's a place for you here. You don't need experience or qualifications but you do need to care. We’ll support you with training, reward you fairly, and welcome you into a team that truly makes a difference.\n\nAs a Carer ",
+      "recruiter": {
+        "id": "rUd7y7SYL",
+        "displayName": "Highland Home Carers"
+      }
+    },
+    {
+      "jobTitleDisplay": "Carer (Learning Disabilities)",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/carer-inverness-j3U2WMkyT",
+      "id": "j3U2WMkyT",
+      "jobTitle": "Carer (Learning Disabilities)",
+      "recruiterId": "rUd7y7SYL",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Inverness",
+        "Scotland",
+        "UK"
+      ],
+      "created": "2025-08-20T08:48:56.784Z",
+      "source": "user",
+      "jobLocation": "Inverness, Scotland, UK",
+      "foundAt": "2025-08-20T08:48:56.784Z",
+      "lat": 57.4777717590332,
+      "lng": -4.22472095489502,
+      "salary": "£12.60-£14.00 per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "Support adults with significant learning disabilities in their own homes across Inverness and surrounding areas, providing personal care, mobility assistance, medication support and help with dietary needs while always preserving choice, dignity and independence. As a Carer (Learning Disabilities) with Highland Home Carers you’ll build meaningful relationships, work alongside experienced practitioners and make a real, practical difference every day — no prior qualifications required; empathy, patience and reliability matter most.\n\nFlexible full-time, part-time and flexible-hour roles are available, paying £12.60–£14.00 per hour with paid overtime, 45p/mile mileage and a strong benefits package, plus training and progression through our award-winning Care Academy in Inverness. Ideal for people starting a new career, returning to work or seeking family-friendly hours — especially appealing to women balancing caring responsibilities — you’ll receive full training and ongoing support. To apply simply click the \"Apply Now\" button; this vacancy is also available on jobsincare.com.",
+      "advantages": [
+        "Paid, free accredited training at Highland's award‑winning Inverness Care Academy — earn while you gain SVQ2/3.",
+        "Flexible hours, part‑time and shift choices — ideal for mums, those returning to work and fit around school runs.",
+        "45p/mile travel pay plus paid overtime — realistic reimbursement if you use your car for local visits.",
+        "No care experience required; on‑the‑job training and SSSC registration support — perfect for women re‑entering work.",
+        "Strong benefits: 6.2 weeks' holiday, contributory pension (employer pays 4%) and tax‑free profit‑share for security.",
+        "Immediate practical perks: access some pay before payday, free uniforms and a £500 unlimited referral bonus."
+      ],
+      "sponsorship": "No",
+      "description": "Make a Difference. Build a Career. Get Rewarded.\nLocation: Inverness & Surrounding Areas\nJob Type: Full-time | Part-time | Flexible Hours\nHourly rate:  £12.60 - £14.00 + Paid Overtime + 45p/mile Mileage\nWhether you're starting your career, returning to work, or already experienced in care, there's a place for you here. You don't need experience or qualifications but you do need to care. We’ll support you with training, reward you fairly, and welcome you into a team that truly makes a difference.\n\nAs a Carer",
+      "recruiter": {
+        "id": "rUd7y7SYL",
+        "displayName": "Highland Home Carers"
+      }
+    },
+    {
+      "jobTitleDisplay": "Care Coordinator",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/care-coordinator-letchworth-garden-city-jXkHk2fUr",
+      "id": "jXkHk2fUr",
+      "jobTitle": "Care Coordinator",
+      "recruiterId": "rpw3hq4G9",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Letchworth Garden City",
+        "England",
+        "UK"
+      ],
+      "created": "2025-08-19T14:36:48.576Z",
+      "source": "user",
+      "jobLocation": "Letchworth Garden City, England, UK",
+      "foundAt": "2025-08-19T14:36:48.576Z",
+      "lat": null,
+      "lng": null,
+      "salary": "£-£ per year",
+      "jobDescription": null,
+      "jobDescription_summary": "Based at our Letchworth Garden City office, you’ll coordinate home care across North Hertfordshire and Stevenage, reporting to the Care Manager and working closely with Field Care Supervisors. You will allocate and template all client visits, match Care and Support Workers to needs, keep electronic records and rotas up to date, process referrals and assessments, and fill gaps via e‑brokerage or private packages. Day‑to‑day tasks include answering incoming enquiries, preparing documentation, authorising annual leave, producing management reports, maintaining the CRM (People Planner) and participating in the on‑call rota — which includes early mornings, evenings and weekends and may require supporting colleagues during emergencies. A full UK driving licence is required; the role covers Letchworth, Hitchin, Baldock, Royston, Stevenage, Knebworth and surrounding areas.\n\nThis is ideal for organised, compassionate and flexible people — particularly women carers ready to step into a coordinating role with genuine responsibility and progression. Caremark has supported independent living since 2005 and offers competitive pay, 35p per mile between visits, funded NVQ study, a £150 referral bonus, early pay access, pension and holiday entitlement, discount schemes and paid ongoing training. You’ll work in a values‑led environment where your attention to detail and people skills directly improve lives. To apply simply click the \"Apply Now\" button — the vacancy is also listed on jobsincare.com for further details.",
+      "advantages": [
+        "Paid mileage of 35p per mile between client visits — ideal if you drive and want local travel costs covered.",
+        "Free study towards NVQ Level 2+ in Adult Social Care and paid ongoing training — clear routes for career progression.",
+        "Office-based role in Letchworth with predictable 08:30–17:30 Mon–Fri hours, plus a manageable on‑call rota — local and stable routine.",
+        "On-site parking at the office and parking permits for visits — makes school runs and shift logistics easier.",
+        "Pension, annual holidays and Early Pay App (access up to 20% of pay early) — financial security and short‑term flexibility.",
+        "Work across North Herts & Stevenage with a supportive team, company events and referral bonuses — local community feel and recognition."
+      ],
+      "sponsorship": "No",
+      "description": " Summary of the Care Coordinator's Role \nThe role is based in our office at Letchworth Garden City, and includes travel across North Hertfordshire and Stevenage. The Care Coordinator's role reports to the Care Manager and responsible for ensuring all client visits are allocated to match suitable Care and Support Workers and to maintain appropriate office procedures.\n\n About Caremark North Herts and Stevenage \nCaremark has been supporting people to live independently in their homes since 2005. Our aim is to ",
+      "recruiter": {
+        "id": "rpw3hq4G9",
+        "displayName": "Caremark North Herts & Stevenage"
+      }
+    },
+    {
+      "jobTitleDisplay": "Care Assistant",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/care-assistant-plymouth-jMvmuqsv2",
+      "id": "jMvmuqsv2",
+      "jobTitle": "Care Assistant",
+      "recruiterId": "r4Hul90Ro",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Plymouth",
+        "UK"
+      ],
+      "created": "2025-08-18T10:08:16.210Z",
+      "source": "user",
+      "jobLocation": "Plymouth, UK",
+      "foundAt": "2025-08-18T10:08:16.210Z",
+      "lat": 50.3754577636719,
+      "lng": -4.14265632629395,
+      "salary": "£12.60-£25.20 per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "Make a tangible difference to people across Plymouth by providing compassionate, practical support that helps clients stay independent in their own homes. As a Care Assistant with Caremark Plymouth — an OUTSTANDING CQC-rated provider — you’ll share in everyday moments that matter: personal care, meal preparation, medication prompting, attending appointments, companionship and keeping homes safe and comfortable. Every day is different and you’ll meet people from all walks of life; previous experience as a healthcare assistant, carer or support worker is warmly welcomed. Please note we are not sponsoring overseas applicants at the moment.\n\nYou’ll be rewarded with clear, competitive pay and a generous benefits package designed to value your time and skills. Rates start at £12.60ph weekdays and £12.90ph weekends (enhanced bank holiday pay up to £25.20ph) with increased rates after 12 months; paid travel time at £12.21ph, 45p per mile, plus paid holiday (28 days pro rata). We also offer a full pay breakdown, free DBS, comprehensive induction and Care Certificate training, free uniform and PPE, Blue Light Discount Card, company pension and free life insurance, £300 refer-a-friend and support for further qualifications. To apply simply click the \"Apply Now\" button alongside this advert — applications are handled via jobsincare.com.",
+      "advantages": [
+        "Paid travel time and 45p per mile — can boost your effective pay by around 20%, ideal if you drive to local visits.",
+        "Work for an OUTSTANDING CQC-rated provider in Plymouth — trusted, stable and respected employer.",
+        "Full paid induction and Care Certificate training, with ongoing support to gain further industry qualifications.",
+        "Flexible home-based shifts that fit family life — great for women balancing childcare, school runs and a car.",
+        "Competitive pay: weekday/weekend rates, pay rises after 12 months and enhanced bank-holiday pay up to £25.20ph.",
+        "Perks: free DBS & uniform, 28 days holiday (pro rata), pension & free life insurance, Blue Light discounts and £300 referral."
+      ],
+      "sponsorship": "No",
+      "description": "Are you looking for a new career? Do you want to make a difference in peoples lives? Do you want to join a team who values and builds on your skills?\n\nIf you answered yes to any of these questions, then being a carer at Caremark might just be for you!\n\nEveryday will be different, and you’ll meet people from every walk of life, hear some amazing stories and learn along the way!\n\nWe are not sponsoring overseas applicants at the moment.\n\nYou will be working for one of the highest rated care providers in Plymou",
+      "recruiter": {
+        "id": "r4Hul90Ro",
+        "displayName": "Caremark Plymouth"
+      }
+    },
+    {
+      "jobTitleDisplay": "Care Assistant ",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/care-assistant-ayrshire-jZHKQ30xh",
+      "id": "jZHKQ30xh",
+      "jobTitle": "Care Assistant ",
+      "recruiterId": "rhZiluCo",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Ayrshire",
+        "Scotland",
+        "UK"
+      ],
+      "created": "2025-08-07T19:00:05.270Z",
+      "source": "user",
+      "jobLocation": "Ayrshire, Scotland, UK",
+      "foundAt": "2025-08-07T19:00:05.270Z",
+      "lat": 55.365,
+      "lng": 4.668,
+      "salary": "£12.60-£14.50 per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "Bluebird Care Ayrshire invites dedicated and compassionate individuals to bring their kind heart and reliable nature to our team as a Care Assistant. Located in Ayrshire, Scotland, this fulfilling role involves supporting individuals in their homes, ensuring they enjoy dignity and independence. You will assist with personal care, mobility, meal preparation, and offer essential companionship, making a meaningful difference in the lives of those you care for. With clear opportunities for career advancement and a progressive pay structure ranging from £12.60 to £14.50 per hour, your efforts will be rewarded and recognised. Embrace the chance to engage with our robust support network, which values your growth and contribution.\n\nAs part of our esteemed Bluebird Care family, you’ll enjoy numerous benefits, including a £300 Care Friends bonus post-probation, mileage reimbursement, and double pay on bank holidays. Our comprehensive support includes a 4-day induction, uniform provision, and a Westfield Health Plan, ensuring your well-being as you care for others. Access personal development through SVQ qualifications, and leverage the Care Friends app to earn additional rewards. All we ask is for your dedication and a UK driving licence with car access. If you're ready to make a genuine impact in a compassionate and vibrant environment, simply click the \"Apply Now\" button to begin your unique journey with Bluebird Care Ayrshire. For more information, visit jobsincare.com.",
+      "advantages": [
+        "Rapid career progression with most advancing in just a few months.",
+        "Receive £300 in Care Friends points after a 3-month probation.",
+        "Double pay on bank holidays ensures rewarding compensation.",
+        "45p per mile mileage reimbursement for those using their own car.",
+        "Warm, welcoming, and truly supportive team environment.",
+        "Enhance skills with full support for SVQ Level 2/3 qualifications."
+      ],
+      "sponsorship": "No",
+      "description": "Care Assistant – Ayrshire | Paid Travel & Waiting Time + £100 Welcome Bonus\n\n💷 Earn £12.60/hr – progress quickly to £14.50/hr\n🎁 £100 Welcome Reward (£50 when you join + £50 after 100 hours of care)\n🚗 Paid Travel & Waiting Time – because every minute of your time matters\n💙 Wellbeing Programme – benefits to keep you supported and thriving\n\nWhy Join Us?\n\nWe believe when we care for our team, they can care better for our customers. That’s why we reward your commitment from day one and back it up with genuin",
+      "recruiter": {
+        "id": "rhZiluCo",
+        "displayName": "Bluebird Care"
+      }
+    },
+    {
+      "jobTitleDisplay": "Care Assistant ",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/care-assistant-edinburgh-jrXpXNVfe",
+      "id": "jrXpXNVfe",
+      "jobTitle": "Care Assistant ",
+      "recruiterId": "rhZiluCo",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Edinburgh",
+        "UK"
+      ],
+      "created": "2025-08-07T18:51:31.541Z",
+      "source": "user",
+      "jobLocation": "Edinburgh, UK",
+      "foundAt": "2025-08-07T18:51:31.541Z",
+      "lat": 55.9532508850098,
+      "lng": -3.18826699256897,
+      "salary": "£13.50-£15.50 per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "Bluebird Care in Edinburgh invites caring and committed individuals to create meaningful change by helping people maintain independence and dignity within the comfort of their own homes. As a Care Assistant, you'll provide vital personal care services including washing, dressing, and supporting mobility while ensuring homes remain clean and secure. Your compassionate presence will offer companionship and promote wellbeing, following tailored care plans for every client. With a clear, rewarding pay structure starting from £13.50 per hour, there's great potential for swift advancement through five pay bands based on performance and growth. Celebrate milestones with £300 in Care Friends points after probation, mileage reimbursements, double pay on bank holidays, and a comprehensive benefits package including a Westfield Health Plan and ongoing support for SVQ qualifications.\n\nIf you're driven by a genuine desire to impact lives positively and effectively, our supportive environment will nurture your professional journey. Alongside receiving a bespoke induction, we'll equip you with uniforms, PPE, and support to thrive. Bring your goodwill, a UK driving licence, and openness to enriching the lives of clients by registering with the PVG scheme and the SSSC. With Bluebird Care, you aren't just stepping into a job; you're embracing a vocation that values, supports, and impacts the community profoundly. Dive deeper by exploring the role on jobsincare.com, and when you're ready to make a magnificent difference, simply click the \"Apply Now\" button to start your journey.",
+      "advantages": [
+        "Competitive pay starting at £13.50/hour with quick progression opportunities and clear banding.",
+        "£300 reward after probation and the potential for more via the Care Friends app.",
+        "Robust support for SVQ Level 2/3 qualifications for career advancement.",
+        "Enhanced mileage reimbursement and double pay on bank holidays.",
+        "Health and wellbeing coverage with the Westfield Health Plan.",
+        "Essential tools provided, including a uniform, PPE, and company data allowance."
+      ],
+      "sponsorship": "No",
+      "description": "Care Assistant – Edinburgh | Paid Travel & Waiting Time + £100 Welcome Bonus\n\n💷 Earn £13.50–£15.50/hr\n🎁 £100 Welcome Reward (£50 when you join + £50 after 100 hours of care)\n🚗 Paid Travel & Waiting Time – because every minute of your time matters\n💙 Wellbeing Programme – benefits to keep you supported and thriving\n\nWhy Join Us?\n\nAt Bluebird Care Edinburgh, you're not just doing a job – you're making a difference. We value your wellbeing as much as the people we support, offering real flexibility, paid tr",
+      "recruiter": {
+        "id": "rhZiluCo",
+        "displayName": "Bluebird Care"
+      }
+    },
+    {
+      "jobTitleDisplay": "Care Assistant",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/care-assistant-manchester-jprLDBjmO",
+      "id": "jprLDBjmO",
+      "jobTitle": "Care Assistant",
+      "recruiterId": "rnZMIpI9P",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Manchester",
+        "UK"
+      ],
+      "created": "2025-07-23T10:32:59.186Z",
+      "source": "user",
+      "jobLocation": "Manchester, UK",
+      "foundAt": "2025-07-23T10:32:59.186Z",
+      "lat": 53.4807586669922,
+      "lng": -2.24263048171997,
+      "salary": "£12.80-£13.93 per hour + mileage + travel time + car allowance",
+      "jobDescription": null,
+      "jobDescription_summary": "Beloved Homecare, an award-winning, family-run provider praised by the CQC, is seeking a dedicated female Care Assistant in the Trafford area. Playing a vital role in enhancing the quality of life for private clients, this position involves personal care, light domestic duties, medication support, meal preparation, and companionship. As part of this supportive, employee-owned team, you'll have the chance to cultivate fulfilling relationships and make a real difference every day. \n\nEnjoy a range of benefits tailored for committed carers, including a generous £150 monthly car allowance, comprehensive induction and training, and ongoing management support available round the clock. You’ll also benefit from fully paid holidays, flexible training opportunities, and a nourishing team environment that values each member. Equipped with a company mobile phone and nestled within 10 miles of the Trafford Centre, this role is perfect if you’re looking for meaningful, community-centred work. If this feels like your calling, simply click 'Apply Now' to join a top-tier care team with Beloved Homecare through jobsincare.com.",
+      "advantages": [
+        "Generous £150 monthly car allowance for drivers.",
+        "Join a 60% staff-owned company with potential bonuses.",
+        "Fully paid holidays to relax and recharge.",
+        "Free company mobile phone to stay connected.",
+        "New staff receive full induction and shadowing.",
+        "24/7 management support accessible anytime."
+      ],
+      "sponsorship": "No",
+      "description": "Care Assistant – Trafford Area (Private Clients) – Drivers Only\n\n💷 £150/month car allowance | 🚫 No sponsorship available | 📍 Must live within 10 miles of Trafford Centre\n\n✨ Why Work for Beloved Homecare?\nWe believe our team deserves the same outstanding care and respect we give our clients. Here’s what you’ll get as part of our award-winning team:\n- £150 monthly car allowance – Available to drivers with a car over 2 years old\n- New Staff Support - New staff receive a full induction and mandatory training",
+      "recruiter": {
+        "id": "rnZMIpI9P",
+        "displayName": "Beloved Homecare"
+      }
+    },
+    {
+      "jobTitleDisplay": "Live-In Care Assistant",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/care-assistant-central-scotland-jdljljN8W",
+      "id": "jdljljN8W",
+      "jobTitle": "Live-In Care Assistant",
+      "recruiterId": "rhZiluCo",
+      "listingType": "premiumplus",
+      "locationTree": [
+        "Central Scotland",
+        "UK"
+      ],
+      "created": "2025-06-26T13:43:18.268Z",
+      "source": "user",
+      "jobLocation": "Central Scotland, UK",
+      "foundAt": "2025-06-26T13:43:18.268Z",
+      "lat": 55.5243,
+      "lng": 3.7035,
+      "salary": "£914.97-£1,054.97 Per Week",
+      "jobDescription": null,
+      "jobDescription_summary": "Embark on a fulfilling career with Bluebird Care Edinburgh & Ayrshire, a reputable provider of exceptional home care services in Central Scotland. As a Live-In Care Assistant, you’ll offer compassionate support directly in the comfort of customers' homes, making a profound impact on their lives. Enjoy placements lasting 2–6 weeks with a flexible rota, and benefit from competitive weekly pay starting at £914.97. Your role will encompass tasks such as personal care, meal preparation, companionship, and light household duties, all while maintaining the dignity and confidentiality of those you care for. If you have a caring nature and a desire to bring joy and stability into the lives of others, this opportunity is perfect for you.\n\nNo prior experience in care is needed, though it’s advantageous. What’s essential is your right to work in the UK, proficiency in English, and a friendly and patient disposition. Bluebird Care provides unwavering 24/7 support, a food allowance, uniform, PPE, and accommodation during placements, ensuring you’re well-equipped to focus on what matters most—making a meaningful difference. With immediate start dates available, bring your dedication and heart to Bluebird Care and embark on a truly rewarding career. To join a community that values your contribution, simply click the \"Apply Now\" button now available on jobsincare.com.",
+      "advantages": [
+        "Earn £914.97 per week, a significant income for rewarding work.",
+        "Immediate starts available for those eager to make a difference quickly.",
+        "Enjoy 24/7 support from a local care management team.",
+        "Free accommodation, food allowance, uniform, and PPE provided.",
+        "OFF-Flexible placements from 2 to 6 weeks, ideal for work-life balance.",
+        "Positively impact lives while working in the comfort of customers' homes."
+      ],
+      "sponsorship": "No",
+      "description": "🌟 Live-In Care Assistant – Edinburgh & Ayrshire\nMake a real difference, one placement at a time.\n\n💙 Why Join Us?\nAt Bluebird Care Edinburgh & Ayrshire, we believe care should be compassionate, dignified, and person-centred — and that starts with how we look after our team. As a Live-In Carer, you’ll have the time to build real relationships and provide one-to-one support that truly transforms lives.\n\nWe’ll support your wellbeing too, with flexibility, fair pay, and a team that’s there for you 24/7.\n\n💷 Wh",
+      "recruiter": {
+        "id": "rhZiluCo",
+        "displayName": "Bluebird Care"
+      }
+    },
+    {
+      "jobTitleDisplay": "Domiciliary Care Assistant – £14/hr + Paid Travel Time (Canterbury & Surrounding Areas)",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/domiciliary-care-assistant-paid-travel-time-surrounding-herne-bay-jZezx1jrX",
+      "id": "jZezx1jrX",
+      "jobTitle": "Domiciliary Care Assistant – £14/hr + Paid Travel Time (Canterbury & Surrounding Areas)",
+      "recruiterId": "rUxpVha0K",
+      "listingType": "premium",
+      "locationTree": [
+        "Herne Bay",
+        "UK"
+      ],
+      "created": "2025-09-15T17:36:02.732Z",
+      "source": "user",
+      "jobLocation": "Herne Bay, UK",
+      "foundAt": "2025-09-15T17:36:02.732Z",
+      "lat": 51.3709220886231,
+      "lng": 1.12777101993561,
+      "salary": "£14 per hour + travel time + mileage",
+      "jobDescription": null,
+      "jobDescription_summary": "Bring kindness, practical skill and a steady hand to people in their own homes across Canterbury, Whitstable, Herne Bay and surrounding villages with Visiting Angels North Kent (based in Herne Bay). You’ll be paid £14.00/hr, with paid travel time at £12.21/hr plus 35p per mile, guaranteed 10 hours a week (with a clear pathway to 20+ hours), paid training, a free work phone and 5% annual pay rises. Shifts are flexible — mornings, evenings and alternate weekends — and you’ll be joining a supportive, friendly team that values reliability, compassion and the real difference carers make.\n\nYou’ll provide personal care, companionship, mobility support, meal prep and help with daily living while following personalised care plans and keeping accurate records; strong relationships with families and local professionals are central to the role. Previous domiciliary experience is ideal, but candidates new to care with the right values are welcome; a full UK driving licence, your own vehicle and the right to work in the UK are required. This opportunity is listed on jobsincare.com — to apply simply click the \"Apply Now\" button.",
+      "advantages": [
+        "Paid travel time (£12.21/hr) plus 35p/mile—your driving between calls is paid, ideal if you use your car for work.",
+        "Guaranteed 10 hrs/week contract (not zero-hours) with pathway to 20+ hrs—gives reliable income for family budgeting.",
+        "£14/hr starting pay with 5% annual increases—fair pay and regular wage growth for long‑term planning.",
+        "Paid training and a free work phone—supports new carers and helps keep work and family calls separate.",
+        "Flexible shifts (mornings, evenings) and only alternate weekends—fits school runs or other family commitments.",
+        "Local roles in Canterbury, Whitstable and Herne Bay with a supportive team—build trusted relationships near home."
+      ],
+      "sponsorship": "No",
+      "description": "💷  £14.00 per hour starting rate \n🚗  Paid travel time (£12.21/hr) + 35p mileage \n📈  Guaranteed 10 hrs/week , with pathway to 20+ hrs/week\n📅  Alternate weekends required \n📱 Paid training & free work phone\n\n Why Join Us? \nWe believe great carers deserve great support. That’s why we guarantee hours, pay fairly for your travel time, and offer clear progression.\n•\tGuaranteed  10 hrs/week contract  (not zero-hours)\n•\t Career progression  with 5% annual pay rises\n•\tFlexible shifts: mornings, evenings & weeken",
+      "recruiter": {
+        "id": "rUxpVha0K",
+        "displayName": "Visiting Angels North Kent"
+      }
+    },
+    {
+      "jobTitleDisplay": "Carer (Night Shift)",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/carer-dingwall-jYKlKYvbP",
+      "id": "jYKlKYvbP",
+      "jobTitle": "Carer (Night Shift)",
+      "recruiterId": "rUd7y7SYL",
+      "listingType": "premium",
+      "locationTree": [
+        "Dingwall",
+        "Scotland",
+        "UK"
+      ],
+      "created": "2025-08-21T14:42:28.613Z",
+      "source": "user",
+      "jobLocation": "Dingwall, Scotland, UK",
+      "foundAt": "2025-08-21T14:42:28.613Z",
+      "lat": 57.595347,
+      "lng": -4.428411,
+      "salary": "£12.60-£14.00 per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "At Highland Home Carers in Dingwall you’ll provide compassionate night-time support to a 66‑year‑old gentleman in his own home, assisting with personal care, meal preparation, light household tasks and friendly conversation. This is a waking night shift, usually 9.45pm–9.00am (finish time may be flexible for the right candidate), available full-time, part-time or with flexible hours; pay is £12.60–£14.00 per hour plus paid overtime and 45p/mile. No previous care experience is required — if you’re caring, kind and committed to person‑centred outcomes we’ll train you.\n\nTrain at our award‑winning Care Academy in Inverness with free, paid-for qualifications (SVQ2, SVQ3 and professional routes), build a long-term career with clear progression, and enjoy sector-leading benefits including 6.2 weeks’ paid holiday, a contributory pension (we pay 4%), tax-free profit‑share and share allocation after qualifying, SSSC support, free uniform and ongoing development. Ideal for those returning to work, working part‑time, or in later life, the role offers flexible, family‑friendly scheduling, referral bonuses and access to some earnings before payday — a trusted local employer with real support. This vacancy is listed on jobsincare.com; to apply simply click the \"Apply Now\" button.",
+      "advantages": [
+        "Free, paid training at Highland Home Carers' award‑winning Care Academy in Inverness — SVQ2/3 and professional qualifications included.",
+        "Get paid while you learn — ideal if you’re returning to work or need steady income while gaining recognised care qualifications.",
+        "Flexible, family‑friendly hours and waking night shifts — great for parents or those fitting work around daytime family commitments.",
+        "Good pay: £12.60–£14/hr + paid overtime and 45p/mile travel — excellent if you have a car and commute from Dingwall.",
+        "Waking night role with a single 66‑year‑old client at home — predictable, quieter nights and possible finish‑time flexibility.",
+        "Generous benefits: 6.2 weeks holiday, 4% employer pension, £500 referral bonus and tax‑free profit‑share after qualifying."
+      ],
+      "sponsorship": "No",
+      "description": "We are currently recruiting for a Care Practitioner* to work with a 66 year-old Gentleman based in his own home in Dingwall. This role will involve personal care, meal preparation, household tasks and general chit chat.\nThe shift pattern for this role is 9.45pm until 9:00 am (for the right candidates there may be some flexibility with the finish time). This is a waking night shift.\nIf you don't have experience, we will give you all the training you need, as long as you are caring, compassionate and committe",
+      "recruiter": {
+        "id": "rUd7y7SYL",
+        "displayName": "Highland Home Carers"
+      }
+    },
+    {
+      "jobTitleDisplay": "Care Assistant",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/care-assistant-cambridge-j6uRzwTuR",
+      "id": "j6uRzwTuR",
+      "jobTitle": "Care Assistant",
+      "recruiterId": "rAfy2sF6",
+      "listingType": "premium",
+      "locationTree": [
+        "Cambridge",
+        "England",
+        "UK"
+      ],
+      "created": "2025-08-20T14:37:03.332Z",
+      "source": "user",
+      "jobLocation": "Cambridge, England, UK",
+      "foundAt": "2025-08-20T14:37:03.332Z",
+      "lat": 52.1950798034668,
+      "lng": 0.13127289712429,
+      "salary": "£14-£28 per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "Make a meaningful difference across Cambridge and South Cambridgeshire with Caremark Cambridge & South Cambridgeshire. We’re recruiting female Care Assistants to provide discreet, person‑centred support to older and vulnerable people — this vacancy is for female applicants only in line with customer preferences and we cannot offer sponsorship. A driving licence and access to your own car are essential. The role pays £14.00 per hour (£28.00 on public holidays) and comes with paid induction training, a DBS check paid for by us, company pension from day one, paid mileage at 35p per mile between calls, a wellness programme, a paid day off on your birthday and 28 days’ holiday pro rata.\n\nYou’ll deliver practical and emotional support including personal care and medication assistance, meal preparation, companionship, community outings, light domestic tasks and helping people sustain their independence. No prior care experience required — full training and ongoing support are provided, with both full‑ and part‑time shifts available to fit your lifestyle. To apply simply click the \"Apply Now\" button alongside this advert. Find out more about working with Caremark on jobsincare.com.",
+      "advantages": [
+        "Female‑only role (Equality Act Schedule 9) — ideal if you prefer sensitive, women‑centred care assignments.",
+        "Competitive pay: £14/hr and £28/hr on public holidays — dependable income for part‑ or full‑time work.",
+        "Paid mileage 35p/mile; driving licence and own car required — perfect for a 40‑year‑old car owner wanting local calls.",
+        "Paid induction, DBS check covered and a structured 12‑week Care Certificate with shadowing — full training provided.",
+        "Flexible shifts (typically 7am–10pm), full/part‑time or nights, and only every‑other weekend — family friendly rota.",
+        "Solid benefits: company pension from day one, 28 days holiday (pro‑rata), wellness programme and a paid birthday day off."
+      ],
+      "sponsorship": "No",
+      "description": "Join Our Compassionate Team – Female Care Assistants Wanted\nCaremark Cambridge & South Cambridgeshire\n🚫 Please note: We do not offer sponsorship for this position\n👩 Female applicants only, in line with the personal nature of the role and customer preferences\n🚗 Driving licence and access to your own car are essential\n\nAre you ready to make a meaningful difference in your community?\nDo you want to be part of a supportive, values-led team that truly appreciates your contribution?\nIf so, we’d love to hear fr",
+      "recruiter": {
+        "id": "rAfy2sF6",
+        "displayName": "Caremark"
+      }
+    },
+    {
+      "jobTitleDisplay": "Waking Night Care Assistant",
+      "jobDescription_text": null,
+      "url": "https://jobsincare.com/job/waking-night-care-assistant-letchworth-garden-city-jlfPaV33d",
+      "id": "jlfPaV33d",
+      "jobTitle": "Waking Night Care Assistant",
+      "recruiterId": "rpw3hq4G9",
+      "listingType": "premium",
+      "locationTree": [
+        "Letchworth Garden City",
+        "England",
+        "UK"
+      ],
+      "created": "2025-08-19T08:32:34.608Z",
+      "source": "user",
+      "jobLocation": "Letchworth Garden City, England, UK",
+      "foundAt": "2025-08-19T08:32:34.608Z",
+      "lat": null,
+      "lng": null,
+      "salary": "£13.65-£14.25 per hour",
+      "jobDescription": null,
+      "jobDescription_summary": "Waking Night Care Assistant with Caremark North Herts & Stevenage, based in Letchworth Garden City — an overnight role (10:00pm–07:00am) providing waking night care in clients’ homes. You’ll deliver compassionate companionship and personal care, assist with mobility, toileting and incontinence, support clients who are unwell or palliative, help with bed care, light household tasks, laundry and meal trays, and complete reports while following Caremark’s policies. Weekend and weekday shifts available; a full UK driving licence is required for visits around Letchworth.\n\nThis position suits organised, caring people—especially women who value meaningful, flexible work and want to grow professionally. Caremark offers competitive hourly pay, 35p per mile mileage, funded NVQ Level 2+ study, referral bonuses, Early Pay access, pension, holiday entitlement, discounts, ongoing paid training and local parking. The role is listed on jobsincare.com; to apply simply click the \"Apply Now\" button.",
+      "advantages": [
+        "Paid mileage 35p/mile plus parking permits — ideal if you drive (great for a 40‑year‑old with a car).",
+        "Waking nights 10pm–7am — fits daytime family commitments, school runs and childcare routines.",
+        "Free NVQ Level 2+ study and paid training — progress into senior roles without course costs.",
+        "Competitive hourly pay, pension, annual leave and Early Pay App to access pay when needed.",
+        "Local Letchworth role with Caremark North Herts & Stevenage — a stable, established employer since 2005.",
+        "Meaningful hands‑on care (dementia, palliative, companionship) — build relationships and make a real difference."
+      ],
+      "sponsorship": "Unknown",
+      "description": "Caremark has been supporting people to live independently in their homes since 2005. Our aim is to provide excellent home care to all regardless of gender race or social standing. Our purpose is to support everyone to continue to live independently in their own homes and have a fulfilled life. We have various full and part time Care Assistant jobs in Hitchin, Hertfordshire to provide a range of home care options to our clients including companionship care, personal care, dementia care, respite care, overnig",
+      "recruiter": {
+        "id": "rpw3hq4G9",
+        "displayName": "Caremark North Herts & Stevenage"
+      }
+    }
+  ],
+  "mapData": {
+
+  }
+}
+

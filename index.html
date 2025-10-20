@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Campaign Manager</title>
+    <style>
+      /* Fallback only if app styles haven’t loaded yet */
+      ._fallback-tab {
+        display:inline-block; margin-right:12px; padding:10px 16px;
+        border-radius:8px; border:1px solid #d1d5db; background:#fff; color:#111; text-decoration:none;
+      }
+      ._fallback-tab:hover { background:#f3f4f6; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Insert a nav tab EXACTLY after “Administrator”, so it sits inline -->
+    <script>
+    (function () {
+      const SOURCE_TABS = ["Job Campaigns", "Campaign Management", "Administrator"];
+      const TARGET_LABEL = "Expired & Reactivate";
+      const TARGET_HREF = "/expired.html";
+
+      function insert() {
+        const findTab = (txt) =>
+          Array.from(document.querySelectorAll("a,button"))
+            .find(el => (el.textContent || "").trim() === txt);
+
+        const tabs = SOURCE_TABS.map(findTab);
+        if (tabs.some(t => !t)) return;  // header not mounted yet
+
+        const adminTab = tabs[2];
+        const parent = adminTab.parentElement || document.body;
+
+        // already injected?
+        const exists = Array.from(parent.querySelectorAll("a,button"))
+          .some(x => (x.textContent || "").trim() === TARGET_LABEL);
+        if (exists) return;
+
+        const link = document.createElement("a");
+        link.href = TARGET_HREF;
+        link.textContent = TARGET_LABEL;
+        link.className = adminTab.className || "_fallback-tab";
+
+        adminTab.insertAdjacentElement("afterend", link);
+      }
+
+      const obs = new MutationObserver(insert);
+      obs.observe(document.documentElement, { childList: true, subtree: true });
+      insert();
+    })();
+    </script>
+  </body>
+</html>

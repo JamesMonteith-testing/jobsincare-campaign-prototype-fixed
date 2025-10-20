@@ -1,0 +1,252 @@
+/* eslint-disable no-console */
+const path = require("path");
+const fs = require("fs");
+const express = require("express");
+const cors = require("cors");
+const http = require("http");
+const { URL } = require("url");
+
+// Node 18+ has global fetch
+const app = express();
+const PORT = Number(process.env.PORT || 5174);
+
+// -------------------- middleware --------------------
+app.use(cors());
+app.use(express.json({ limit: "2mb" }));
+app.use(express.urlencoded({ extended: true }));
+
+// -------------------- serve static files (for expired.html etc.) --------------------
+const FRONTEND_PUBLIC = path.join(__dirname, "../public");
+app.use(express.static(FRONTEND_PUBLIC));
+
+// -------------------- paths --------------------
+const SERVER_DIR = __dirname;
+const DATA_DIR = path.join(SERVER_DIR, "data");
+const ROUTES_DIR = path.join(SERVER_DIR, "routes");
+const AREAS_CSV_PATH = path.join(ROUTES_DIR, "areas.csv");
+const LOCATION_OVERRIDES_PATH = path.join(DATA_DIR, "location-overrides.json");
+const ADMIN_SETTINGS_PATH = path.join(DATA_DIR, "admin-settings.json");
+
+// ensure folders
+fs.mkdirSync(DATA_DIR, { recursive: true });
+
+// -------------------- helpers --------------------
+function readJson(fp, fallback) {
+  try {
+    if (!fs.existsSync(fp)) return fallback;
+    return JSON.parse(fs.readFileSync(fp, "utf8"));
+  } catch (e) {
+    console.warn("[readJson] failed:", fp, e.message);
+    return fallback;
+  }
+}
+function writeJson(fp, obj) {
+  try {
+    fs.writeFileSync(fp, JSON.stringify(obj, null, 2), "utf8");
+    return true;
+  } catch (e) {
+    console.error("[writeJson] failed:", fp, e.message);
+    return false;
+  }
+}
+
+// -------------------- Admin settings --------------------
+const DEFAULT_ADMIN_SETTINGS = {
+  apiEndpoint: "http://localhost:5174",
+  liveWindowWeeks: 6,
+  enableFacebook: true,
+  enableGoogle: true,
+  enableLinkedin: false,
+  enableTiktok: false,
+};
+
+app.get("/api/admin/settings", (_req, res) => {
+  const s = readJson(ADMIN_SETTINGS_PATH, DEFAULT_ADMIN_SETTINGS);
+  if (!s || typeof s !== "object") return res.json({ ...DEFAULT_ADMIN_SETTINGS });
+  if (!s.apiEndpoint) s.apiEndpoint = DEFAULT_ADMIN_SETTINGS.apiEndpoint;
+  res.json({ ...DEFAULT_ADMIN_SETTINGS, ...s });
+});
+
+app.post("/api/admin/settings", (req, res) => {
+  const next = { ...DEFAULT_ADMIN_SETTINGS, ...(req.body || {}) };
+  if (!writeJson(ADMIN_SETTINGS_PATH, next)) {
+    return res.status(500).json({ error: "persist_failed" });
+  }
+  res.json({ ok: true, settings: next });
+});
+
+// -------------------- Areas CSV loader --------------------
+function parseCSV(textRaw) {
+  const text = String(textRaw).replace(/^\uFEFF/, "");
+  const lines = text.replace(/\r\n/g, "\n").replace(/\r/g, "\n").split("\n").filter(Boolean);
+  if (!lines.length) return [];
+  const parseLine = (line) => {
+    const out = [];
+    let cur = "";
+    let inQ = false;
+    for (let i = 0; i < line.length; i++) {
+      const ch = line[i];
+      if (inQ) {
+        if (ch === '"') {
+          if (line[i + 1] === '"') { cur += '"'; i++; }
+          else { inQ = false; }
+        } else cur += ch;
+      } else {
+        if (ch === '"') inQ = true;
+        else if (ch === ",") { out.push(cur); cur = ""; }
+        else cur += ch;
+      }
+    }
+    out.push(cur);
+    return out.map((s) => s.trim());
+  };
+  const header = parseLine(lines[0]);
+  const idxArea = header.findIndex((h) => h.toLowerCase() === "areas");
+  if (idxArea === -1) return [];
+  const out = [];
+  for (let i = 1; i < lines.length; i++) {
+    const cols = parseLine(lines[i]);
+    if (cols[idxArea]) out.push(cols[idxArea]);
+  }
+  return out;
+}
+
+// -------------------- Load Areas / Location Overrides --------------------
+let AREAS = [];
+try {
+  if (fs.existsSync(AREAS_CSV_PATH)) {
+    const text = fs.readFileSync(AREAS_CSV_PATH, "utf8");
+    AREAS = parseCSV(text);
+    console.log(`[areas] loaded ${AREAS.length} areas from areas.csv`);
+  } else {
+    console.warn("[areas] no areas.csv found");
+  }
+} catch (e) {
+  console.error("[areas] failed to load:", e.message);
+}
+const LOCATION_OVERRIDES = readJson(LOCATION_OVERRIDES_PATH, {});
+
+// -------------------- Upstream base --------------------
+const UPSTREAM_BASE = "https://jobsincare.com/api/jobs";
+console.log("Upstream base:", `${UPSTREAM_BASE}?perPage=50&pageNumber=1`);
+
+// -------------------- Utility: extract and normalize --------------------
+function extractJobs(js) {
+  if (Array.isArray(js)) return js;
+  const keys = ["items", "data", "results", "jobs", "records", "rows"];
+  for (const k of keys) if (Array.isArray(js?.[k])) return js[k];
+  if (js && typeof js === "object") {
+    for (const v of Object.values(js)) {
+      if (Array.isArray(v) && v.length && typeof v[0] === "object") return v;
+    }
+  }
+  return [];
+}
+
+function normaliseJob(j) {
+  const id = j.id || j.jobId;
+  const area = j.areaName || j.location || "";
+  const override = (id && LOCATION_OVERRIDES[id]) || {};
+
+  return {
+    ...j,
+    id,
+    recruiterName:
+      j.recruiterName || j.recruiter || j.postedBy || "Unknown recruiter",
+    title: j.title || j.jobTitle || "Untitled job",
+    areaName: override.areaName || area,
+    location: override.location || j.location || area,
+  };
+}
+
+function filterByIdsIfProvided(jobsArr, req) {
+  const idsParam = (req.query?.ids || "").trim();
+  if (!idsParam) return jobsArr;
+  const want = new Set(idsParam.split(",").map((s) => s.trim()).filter(Boolean));
+  return (jobsArr || []).filter((j) => {
+    const id = j.id || j.jobId || "";
+    return id && want.has(String(id));
+  });
+}
+
+// -------------------- /api/jobs --------------------
+app.get("/api/jobs", async (req, res) => {
+  try {
+    const perPage = String(req.query.perPage || 50);
+    const pageNumber = String(req.query.pageNumber || 1);
+    const url = new URL(UPSTREAM_BASE);
+    url.searchParams.set("perPage", perPage);
+    url.searchParams.set("pageNumber", pageNumber);
+
+    const r = await fetch(url.toString());
+    if (!r.ok) return res.status(502).json({ error: "upstream_failed", status: r.status });
+
+    const js = await r.json();
+    const jobs = extractJobs(js).map(normaliseJob);
+
+    if (Array.isArray(js)) return res.json(jobs);
+
+    const clone = { ...js };
+    const keys = ["items", "data", "results", "jobs", "records", "rows"];
+    let replaced = false;
+    for (const k of keys) {
+      if (Array.isArray(js[k])) { clone[k] = jobs; replaced = true; break; }
+    }
+    return res.json(replaced ? clone : jobs);
+  } catch (e) {
+    console.error("[/api/jobs]", e);
+    res.status(500).json({ error: "jobs_failed", detail: e.message });
+  }
+});
+
+// -------------------- /api/:channel.json or .xml --------------------
+app.get("/api/:channel.:fmt", async (req, res) => {
+  const { fmt } = req.params;
+  try {
+    const url = new URL(UPSTREAM_BASE);
+    url.searchParams.set("perPage", String(req.query.perPage || 50));
+    url.searchParams.set("pageNumber", String(req.query.pageNumber || 1));
+    const r = await fetch(url.toString());
+    if (!r.ok) throw new Error(`Upstream error: ${r.status}`);
+
+    const js = await r.json();
+    let jobs = extractJobs(js).map(normaliseJob);
+    jobs = filterByIdsIfProvided(jobs, req);
+
+    if (fmt === "json") return res.json(jobs);
+
+    if (fmt === "xml") {
+      const xml =
+        '<?xml version="1.0" encoding="UTF-8"?>\n<jobs>' +
+        jobs
+          .map((j) => {
+            const esc = (s) => String(s || "").replace(/[<>&]/g, "");
+            const id = j.id || j.jobId || "";
+            return `<job id="${esc(id)}"><title>${esc(
+              j.title || j.jobTitle
+            )}</title><recruiter>${esc(
+              j.recruiterName
+            )}</recruiter><area>${esc(j.areaName || j.location)}</area></job>`;
+          })
+          .join("\n") +
+        "</jobs>";
+      res.set("Content-Type", "application/xml");
+      return res.send(xml);
+    }
+
+    return res.status(400).json({ error: "unknown_format" });
+  } catch (e) {
+    console.error("[feed]", e);
+    res.status(500).json({ error: "feed_failed", detail: e.message });
+  }
+});
+
+// -------------------- Root --------------------
+app.get("/", (_req, res) => {
+  res.send("JobsInCare API server running");
+});
+
+// -------------------- Start server --------------------
+http.createServer(app).listen(PORT, () => {
+  console.log(`API listening on http://localhost:${PORT}`);
+});

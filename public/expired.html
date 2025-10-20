@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expired & Reactivate</title>
+    <style>
+      body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial; color:#111827; margin:0; }
+      .wrap { max-width: 1100px; margin: 0 auto; padding: 20px; }
+      .tabs { display:flex; gap:12px; margin-bottom:16px; flex-wrap: wrap; }
+      .tab { padding:8px 12px; border:1px solid #e5e7eb; border-radius:8px; background:#f9fafb; color:#111827; text-decoration:none }
+      .tab.active { background:#2563eb; color:#fff; }
+      h1 { font-size: 32px; margin: 10px 0 18px; }
+      .controls { display:flex; gap:10px; align-items:center; margin-bottom: 8px; flex-wrap:wrap; }
+      .input { padding:8px 12px; border:1px solid #e5e7eb; border-radius:8px; min-width: 280px; }
+      .btn { padding:8px 12px; border-radius:8px; border:1px solid #2563eb; background:#2563eb; color:#fff; cursor:pointer; }
+      .api { color:#6b7280; font-size:13px; margin: 8px 0 16px; word-break: break-all; }
+      table { width:100%; border-collapse: collapse; }
+      th, td { padding:10px 8px; border-bottom:1px solid #e5e7eb; text-align:left; vertical-align: top; }
+      th { color:#6b7280; font-weight:600; }
+      .muted { color:#6b7280; }
+      .err { color:#b91c1c; }
+      .badge { display:inline-block; padding:2px 8px; border-radius:999px; background:#f3f4f6; font-size:12px; }
+      .right { margin-left:auto; color:#6b7280; font-size:13px; }
+      .note { font-size:13px; color:#6b7280; margin-top: 8px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- Top nav: static pages link relatively; SPA tabs via hash -->
+      <div class="tabs" id="tabs">
+        <a class="tab" href="./">Job Campaigns</a>
+        <a class="tab" href="./#manage">Campaign Management</a>
+        <a class="tab" href="./#admin">Administrator</a>
+        <a class="tab" href="./expired.html" data-match="/expired.html">Expired &amp; Reactivate</a>
+        <div class="right" id="apiLabel">API: …</div>
+      </div>
+
+      <h1>Expired &amp; Reactivate</h1>
+
+      <div class="controls">
+        <input id="q" class="input" placeholder="Filter by recruiter name…" />
+        <button id="refreshBtn" class="btn">Refresh</button>
+      </div>
+
+      <div class="api" id="apiInfo"></div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Job</th>
+            <th>Recruiter</th>
+            <th>Created</th>
+            <th>Override</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="rows">
+          <tr><td colspan="5" class="muted">Loading…</td></tr>
+        </tbody>
+      </table>
+
+      <div class="note" id="footNote"></div>
+    </div>
+
+    <script type="module">
+      // ---- Activate the correct tab (blue) based on current path/hash
+      const here = location.pathname.replace(/\/+$/, "") || "/";
+      document.querySelectorAll('#tabs .tab').forEach(a => {
+        const wants = a.getAttribute("data-match") || new URL(a.href, location.origin).pathname;
+        if (wants === here || (here === "/" && a.getAttribute("href") === "./")) {
+          a.classList.add("active");
+        }
+      });
+
+      const rowsEl = document.getElementById("rows");
+      const apiInfoEl = document.getElementById("apiInfo");
+      const apiLabelEl = document.getElementById("apiLabel");
+      const footNoteEl = document.getElementById("footNote");
+      const qEl = document.getElementById("q");
+      const refreshBtn = document.getElementById("refreshBtn");
+
+      // Utilities
+      const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (m) => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[m]));
+      const fmtDate = (iso) => {
+        try { const d = new Date(iso); if (isNaN(+d)) return ""; return d.toLocaleString(); } catch { return ""; }
+      };
+
+      // Admin settings (label only). Your running backend is localhost:5174.
+      let API_BASE = "http://localhost:5174";
+      async function loadSettings() {
+        try {
+          const r = await fetch(`${API_BASE}/api/admin/settings`, { headers: { Accept: "application/json" } });
+          if (r.ok) {
+            const js = await r.json();
+            API_BASE = (js.apiEndpoint || API_BASE).replace(/\/$/, "");
+          }
+        } catch {}
+        apiLabelEl.textContent = `API: ${API_BASE}`;
+      }
+
+      // Build the intended expired URL (front-end concern only)
+      function buildExpiredUrl() {
+        const perPage = 50;
+        const maxPages = 12;
+        const timeLimitMs = 25000;
+        return `${API_BASE}/api/expired?perPage=${perPage}&maxPages=${maxPages}&timeLimitMs=${timeLimitMs}`;
+      }
+
+      function renderError(status, brief) {
+        rowsEl.innerHTML = `<tr><td colspan="5" class="err">Error: HTTP ${esc(status)}${brief ? " – " + esc(brief) : ""}</td></tr>`;
+      }
+
+      function renderEmpty() {
+        rowsEl.innerHTML = `<tr><td colspan="5" class="muted">No expired jobs.</td></tr>`;
+      }
+
+      function renderRows(items) {
+        if (!Array.isArray(items) || !items.length) return renderEmpty();
+        const q = qEl.value.trim().toLowerCase();
+        const filtered = q ? items.filter(i => (i.recruiterName || "").toLowerCase().includes(q)) : items;
+        if (!filtered.length) return renderEmpty();
+
+        rowsEl.innerHTML = filtered.map((it) => {
+          const job = esc(it.title || it.jobTitle || "(untitled)");
+          const rec = esc(it.recruiterName || "");
+          const created = fmtDate(it.createdAt || it.created || it.date);
+          const override = it.override ? `<span class="badge">Yes</span>` : `<span class="muted">—</span>`;
+          const reactivateBtn = `<button class="btn" data-id="${esc(it.id || it.jobId || "")}" data-action="reactivate" style="padding:6px 10px; border-color:#10b981; background:#10b981">Reactivate</button>`;
+          return `<tr>
+            <td>${job}</td>
+            <td>${rec || "<span class='muted'>—</span>"}</td>
+            <td>${created || "<span class='muted'>—</span>"}</td>
+            <td>${override}</td>
+            <td>${reactivateBtn}</td>
+          </tr>`;
+        }).join("");
+      }
+
+      async function refresh() {
+        const url = buildExpiredUrl();
+        apiInfoEl.textContent = `API: ${url}`;
+        footNoteEl.textContent = "";
+        rowsEl.innerHTML = `<tr><td colspan="5" class="muted">Loading…</td></tr>`;
+
+        try {
+          const r = await fetch(url, { headers: { Accept: "application/json" } });
+          if (!r.ok) {
+            let msg = "";
+            try {
+              const text = await r.text();
+              const m = text.match(/Cannot\s+GET\s+([^\s<]+)/i);
+              msg = m ? `Endpoint not available (${m[1]})` : "Endpoint not available";
+            } catch {}
+            renderError(r.status, msg);
+            footNoteEl.textContent = "Backend route isn’t implemented or not reachable yet. Front-end is ready and will render as soon as the endpoint returns JSON.";
+            return;
+          }
+          const js = await r.json();
+          const list = Array.isArray(js) ? js : (Array.isArray(js.items) ? js.items : []);
+          renderRows(list);
+        } catch (e) {
+          renderError("network", e?.message || "Network error");
+          footNoteEl.textContent = "Check that the API server is running and accessible from this page.";
+        }
+      }
+
+      // Wire up
+      refreshBtn.addEventListener("click", refresh);
+      qEl.addEventListener("input", () => refresh());
+
+      // Init
+      await loadSettings();
+      await refresh();
+    </script>
+  </body>
+</html>
