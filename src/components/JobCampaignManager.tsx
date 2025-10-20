@@ -10,7 +10,7 @@ type Job = {
   jobTitle?: string;
   jobTitleDisplay?: string;
   recruiterName?: string;
-  recruiter?: any; // can be string or { id, displayName, ... }
+  recruiter?: any;
   postedBy?: string;
   recruiterId?: string;
   location?: string;
@@ -41,11 +41,8 @@ const readChannels = (): UiChannel[] =>
     { name: "tiktok", slug: "tiktok" },
   ]);
 
-const stext = (v: any) => (typeof v === "string" ? v : String(v ?? "")).trim();
-
 /** Safely derive the recruiter label from mixed shapes */
 const jobRecruiter = (j: any) => {
-  // always prefer recruiterName, guaranteed by the API
   if (typeof j.recruiterName === "string" && j.recruiterName.trim()) {
     return j.recruiterName.trim();
   }
@@ -170,6 +167,7 @@ function JobsTable({ apiBase }: { apiBase: string }) {
   const [error, setError] = useState("");
   const [recruiterFilter, setRecruiterFilter] = useState("All");
   const [channels, setChannels] = useState<UiChannel[]>(readChannels());
+  const [refreshTrigger, setRefreshTrigger] = useState(0);
 
   useEffect(() => {
     const update = () => setChannels(readChannels());
@@ -198,7 +196,7 @@ function JobsTable({ apiBase }: { apiBase: string }) {
         setLoading(false);
       }
     })();
-  }, [apiBase]);
+  }, [apiBase, refreshTrigger]);
 
   const recruiters = React.useMemo(() => {
     const s = new Set<string>();
@@ -214,20 +212,75 @@ function JobsTable({ apiBase }: { apiBase: string }) {
   );
 
   const toggleKey = (jobId: string, slug: string) => `jc.toggle.${jobId}.${slug}`;
-  const isOn = (jobId: string, slug: string) => loadLS<boolean>(toggleKey(jobId, slug), false);
-  const setOn = (jobId: string, slug: string, v: boolean) =>
+  const isOn = (jobId: string, slug: string) =>
+    loadLS<boolean>(toggleKey(jobId, slug), false);
+  const setOn = (jobId: string, slug: string, v: boolean) => {
     localStorage.setItem(toggleKey(jobId, slug), JSON.stringify(v));
+    setRefreshTrigger((prev) => prev + 1);
+  };
+
+  // --- Updated area functions (handles old + new localStorage formats)
+  const areaKey = (jobId: string) => `jc.area.${jobId}`;
+  const getSelectedArea = (jobId: string) => {
+    const raw = localStorage.getItem(areaKey(jobId));
+    if (!raw) return "";
+    try {
+      // Handle both JSON string and plain text values
+      const parsed = JSON.parse(raw);
+      return typeof parsed === "string" ? parsed : "";
+    } catch {
+      return raw;
+    }
+  };
+  const setSelectedArea = (jobId: string, area: string) => {
+    localStorage.setItem(areaKey(jobId), JSON.stringify(area));
+    // trigger same event the app already listens to, to re-render immediately
+    window.dispatchEvent(new Event("channels-updated"));
+  };
+
+  // Hardcoded areas list
+  const areas = [
+    "London",
+    "Manchester",
+    "Birmingham",
+    "Glasgow",
+    "Edinburgh",
+    "Liverpool",
+    "Bristol",
+    "Oxford",
+    "Cambridge",
+    "Leeds",
+    "Cardiff",
+    "Belfast",
+    "Newcastle",
+    "Sheffield",
+    "Nottingham",
+  ];
 
   return (
     <>
-      <div style={{ display: "flex", gap: 10, alignItems: "center", marginBottom: 12, flexWrap: "wrap" }}>
+      <div
+        style={{
+          display: "flex",
+          gap: 10,
+          alignItems: "center",
+          marginBottom: 12,
+          flexWrap: "wrap",
+        }}
+      >
         <div>
-          <label style={{ fontSize: 13, color: "#6b7280", marginRight: 8 }}>Recruiter:</label>
+          <label style={{ fontSize: 13, color: "#6b7280", marginRight: 8 }}>
+            Recruiter:
+          </label>
         </div>
         <select
           value={recruiterFilter}
           onChange={(e) => setRecruiterFilter(e.target.value)}
-          style={{ padding: "8px 10px", border: "1px solid #e5e7eb", borderRadius: 8 }}
+          style={{
+            padding: "8px 10px",
+            border: "1px solid #e5e7eb",
+            borderRadius: 8,
+          }}
         >
           {recruiters.map((r) => (
             <option key={r} value={r}>
@@ -236,7 +289,7 @@ function JobsTable({ apiBase }: { apiBase: string }) {
           ))}
         </select>
         <button
-          onClick={() => window.location.reload()}
+          onClick={() => setRefreshTrigger((prev) => prev + 1)}
           style={{
             padding: "8px 12px",
             borderRadius: 8,
@@ -245,7 +298,7 @@ function JobsTable({ apiBase }: { apiBase: string }) {
             cursor: "pointer",
           }}
         >
-          Reload
+          Refresh
         </button>
         <div style={{ marginLeft: "auto", color: "#6b7280", fontSize: 13 }}>
           API: <code>{apiBase}</code>
@@ -256,7 +309,9 @@ function JobsTable({ apiBase }: { apiBase: string }) {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: `1.4fr 0.8fr 1fr ${channels.map(() => ".5fr").join(" ")}`,
+            gridTemplateColumns: `1.4fr 0.8fr 1fr ${channels
+              .map(() => ".5fr")
+              .join(" ")}`,
             gap: 0,
             padding: "10px 12px",
             fontWeight: 600,
@@ -268,14 +323,19 @@ function JobsTable({ apiBase }: { apiBase: string }) {
           <div>Recruiter</div>
           <div>Location</div>
           {channels.map((c) => (
-            <div key={c.slug} style={{ textAlign: "center", textTransform: "lowercase" }}>
+            <div
+              key={c.slug}
+              style={{ textAlign: "center", textTransform: "lowercase" }}
+            >
               {c.slug}
             </div>
           ))}
         </div>
 
         {loading && <div style={{ padding: 16, color: "#6b7280" }}>Loading…</div>}
-        {error && !loading && <div style={{ padding: 16, color: "#b91c1c" }}>Error: {error}</div>}
+        {error && !loading && (
+          <div style={{ padding: 16, color: "#b91c1c" }}>Error: {error}</div>
+        )}
         {!loading && !error && filteredJobs.length === 0 && (
           <div style={{ padding: 16, color: "#6b7280" }}>No jobs.</div>
         )}
@@ -285,15 +345,24 @@ function JobsTable({ apiBase }: { apiBase: string }) {
           filteredJobs.map((j, idx) => {
             const jobId = idOf(j);
             const created = j.createdAt || j.created || "";
-            const title = j.jobTitleDisplay || j.title || j.jobTitle || "(untitled)";
+            const title =
+              j.jobTitleDisplay || j.title || j.jobTitle || "(untitled)";
             const loc =
-              j.jobLocation || j.location || j.areaName || (j.locationTree || []).join(", ") || "";
+              j.jobLocation ||
+              j.location ||
+              j.areaName ||
+              (j.locationTree || []).join(", ") ||
+              "";
+            const selectedArea = getSelectedArea(jobId);
+
             return (
               <div
                 key={`${jobId}-${idx}`}
                 style={{
                   display: "grid",
-                  gridTemplateColumns: `1.4fr 0.8fr 1fr ${channels.map(() => ".5fr").join(" ")}`,
+                  gridTemplateColumns: `1.4fr 0.8fr 1fr ${channels
+                    .map(() => ".5fr")
+                    .join(" ")}`,
                   gap: 0,
                   padding: "10px 12px",
                   borderTop: "1px solid #f3f4f6",
@@ -303,23 +372,56 @@ function JobsTable({ apiBase }: { apiBase: string }) {
                 <div>
                   <div style={{ fontWeight: 700 }}>{title}</div>
                   <div style={{ fontSize: 12, color: "#6b7280", marginTop: 4 }}>
-                    Created: {created ? new Date(created).toLocaleDateString() : "—"}
+                    Created:{" "}
+                    {created ? new Date(created).toLocaleDateString() : "—"}
                     <br />ID: <code>{jobId || "—"}</code>
                   </div>
                 </div>
                 <div>{jobRecruiter(j) || "—"}</div>
-                <div>{loc || <span style={{ color: "#6b7280" }}>Select area…</span>}</div>
+                <div>
+                  <select
+                    value={selectedArea}
+                    onChange={(e) => setSelectedArea(jobId, e.target.value)}
+                    style={{
+                      width: "100%",
+                      padding: "6px 8px",
+                      border: "1px solid #e5e7eb",
+                      borderRadius: 6,
+                      fontSize: "13px",
+                      background: "white",
+                    }}
+                  >
+                    <option value="">{loc || "Select area…"}</option>
+                    {areas.map((area) => (
+                      <option key={area} value={area}>
+                        {area}
+                      </option>
+                    ))}
+                  </select>
+                  {selectedArea && loc && (
+                    <div
+                      style={{
+                        fontSize: "11px",
+                        color: "#6b7280",
+                        marginTop: "4px",
+                      }}
+                    >
+                      Original: {loc}
+                    </div>
+                  )}
+                </div>
 
                 {channels.map((c) => {
                   const on = isOn(jobId, c.slug);
                   return (
-                    <div key={c.slug} style={{ display: "flex", justifyContent: "center" }}>
+                    <div
+                      key={c.slug}
+                      style={{ display: "flex", justifyContent: "center" }}
+                    >
                       <Toggle
                         checked={on}
                         onChange={(v) => {
                           setOn(jobId, c.slug, v);
-                          // force an immediate re-render so the UI reflects the change
-                          setJobs((prev) => [...prev]);
                         }}
                         label={`Enable ${c.name || c.slug} for job ${title}`}
                       />
@@ -338,7 +440,8 @@ function JobsTable({ apiBase }: { apiBase: string }) {
 export default function App() {
   const apiBase = useMemo(() => {
     const v = (import.meta as any)?.env?.VITE_API_BASE_URL;
-    const base = (typeof v === "string" && v.trim()) || "http://localhost:5174";
+    const base =
+      (typeof v === "string" && v.trim()) || "http://localhost:5174";
     return base.replace(/\/$/, "");
   }, []);
 
